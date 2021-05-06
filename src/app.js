@@ -1,10 +1,14 @@
 const express = require("express");
 const path = require("path");
 const multer = require("multer");
+const dotenv = require("dotenv");
 const app = express();
+
+dotenv.config({ path: "../config.env" });
 require("./backend/db/conn");
 const session = require("express-session");
 const flash = require("connect-flash");
+
 const port = process.env.PORT || 4000;
 
 const staticpath = path.join(__dirname, "./client");
