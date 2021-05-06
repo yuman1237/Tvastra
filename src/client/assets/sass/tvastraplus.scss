@@ -1,0 +1,951 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(177, 174, 174);
+  --black: black;
+  --green: rgb(54, 99, 54);
+  --very-light-blue: #b4daf3;
+}
+.tvastra-plus-heading-package {
+  padding: 0;
+  position: relative;
+  .tvastra-plus-heading {
+    background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/task30-tvastra-plus/tvastraPlus_heroSection.webp");
+    background-size: cover;
+    height: 24rem;
+    background-position: 10% top;
+    button {
+      margin-bottom: 1rem;
+    }
+    padding-bottom: 8rem;
+  }
+  .packages-section {
+    background-image: linear-gradient(
+      to top,
+      rgba(248, 240, 240, 0),
+      var(--light-blue)
+    );
+    height: 90rem;
+    .all-3-package {
+      width: 90%;
+      position: absolute;
+      background-color: var(--white);
+      padding: 1.5rem 0.5rem;
+      top: 13%;
+      box-shadow: var(--black) 3px 5px 24px;
+      border-radius: 0.5rem;
+      h3 {
+        line-height: 1.6rem;
+      }
+      .package-para {
+        border-bottom: 1px solid var(--light-grey-txt);
+      }
+      .healcthcare-package {
+        margin-bottom: 1rem;
+        h4 {
+          font-size: 1.2rem;
+          border-bottom: 1px solid var(--light-grey-txt);
+          padding-bottom: 1rem;
+        }
+        p {
+          padding: 1rem 0.5rem;
+        }
+        .price {
+          padding-top: 4rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 0;
+          span {
+            color: var(--dark-blue);
+            font-size: 0.9rem;
+          }
+        }
+        .view-details {
+          padding: 0;
+          color: var(--light-blue-text);
+          font-family: nexafont-bold;
+          text-align: center;
+        }
+        button {
+          margin: 10% 0 0 30%;
+        }
+        padding: 1rem 2rem;
+      }
+      .advance-plan {
+        background-image: linear-gradient(
+          to top,
+          rgba(248, 240, 240, 0),
+          var(--light-blue)
+        );
+        h4 {
+          padding-top: 0.5rem;
+        }
+        .popular {
+          top: 36.2%;
+          right: 38%;
+          position: absolute;
+          background-color: var(--green);
+          color: var(--white);
+          padding: 0.3rem 1rem;
+          border-radius: 1.2rem;
+        }
+      }
+    }
+  }
+}
+.trusted-section {
+  .num-star {
+    color: var(--light-blue-text);
+    padding-top: 2rem;
+    font-size: 2.5rem;
+  }
+  .star {
+    width: 25%;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    span {
+      color: var(--light-blue-text);
+    }
+  }
+  .review {
+    color: var(--light-blue-text);
+  }
+  .rating-line {
+    justify-content: center;
+    flex-direction: column;
+    .bars {
+      justify-content: center;
+
+      .side {
+        width: 10%;
+        margin-top: 0.5rem;
+
+        padding: 0;
+        font-family: nexafont-bold;
+        color: var(--light-blue-text);
+      }
+
+      .middle {
+        width: 60%;
+        margin-top: 0.4rem;
+      }
+
+      .bar-container {
+        background-color: var(--light-grey-txt);
+        border-radius: 1rem;
+      }
+      .bar {
+        height: 0.7rem;
+        background-color: var(--light-blue-text);
+        border-radius: 1rem;
+      }
+      .bar-5 {
+        width: 70%;
+      }
+      .bar-4 {
+        width: 30%;
+      }
+      .bar-3 {
+        width: 20%;
+      }
+      .bar-2 {
+        width: 20%;
+      }
+      .bar-1 {
+        width: 10%;
+      }
+    }
+  }
+  .trusted-icons {
+    padding-top: 2rem;
+    .trusted-icons-card {
+      width: 49%;
+      flex-direction: column;
+      i {
+        font-size: 2.5rem;
+        color: var(--light-blue-text);
+      }
+      h3 {
+        padding: 0.5rem;
+        color: var(--light-blue-text);
+      }
+      p {
+        color: var(--light-blue-text);
+      }
+    }
+  }
+}
+
+.benefits-section {
+  ul {
+    h2 {
+      padding-bottom: 2rem;
+    }
+    li {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      i {
+        width: 8%;
+
+        font-size: 1.3rem;
+        color: var(--light-blue);
+      }
+      p {
+        width: 90%;
+      }
+    }
+  }
+  h3 {
+    padding-bottom: 2rem;
+  }
+  .hospitals-onboard {
+    figure {
+      width: 50%;
+      height: 6rem;
+
+      margin: 0;
+    }
+    .fig-1 {
+      img {
+        margin-top: 0.5rem;
+        width: 100%;
+        height: 70%;
+        padding: 0.5rem;
+      }
+      border-right: 1px solid var(--light-blue);
+      border-bottom: 1px solid var(--light-blue);
+    }
+    .fig-2 {
+      img {
+        margin-top: 1rem;
+        width: 100%;
+        height: 60%;
+        padding: 0.5rem;
+      }
+      border-bottom: 1px solid var(--light-blue);
+    }
+    .fig-3 {
+      img {
+        width: 75%;
+        height: 80%;
+        margin-top: 0.6rem;
+        margin-left: 1rem;
+      }
+      border-right: 1px solid var(--light-blue);
+      border-bottom: 1px solid var(--light-blue);
+    }
+    .fig-4 {
+      img {
+        width: 60%;
+        height: 100%;
+        padding: 0.5rem;
+        margin-left: 1.8rem;
+      }
+      border-bottom: 1px solid var(--light-blue);
+    }
+    .fig-5 {
+      img {
+        width: 60%;
+        height: 100%;
+        margin-left: 1.8rem;
+      }
+      border-right: 1px solid var(--light-blue);
+    }
+    .fig-6 {
+      img {
+        width: 60%;
+        height: 100%;
+        margin-left: 1.8rem;
+      }
+    }
+    padding-bottom: 1rem;
+  }
+}
+.consultation-section {
+  .consultation-card {
+    margin-bottom: 2rem;
+    ul {
+      li {
+        display: flex;
+        flex-direction: row;
+        padding: 0.3rem;
+
+        i {
+          font-size: 1.2rem;
+          color: var(--light-blue);
+        }
+        p {
+          width: 90%;
+        }
+      }
+    }
+    figure {
+      border-radius: 1rem;
+      overflow: hidden;
+
+      box-shadow: var(--black) 1px 3px 10px;
+    }
+  }
+  h5 {
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+  .vitamin-cards {
+    padding-top: 1rem;
+    justify-content: center;
+    .splide__track{
+     
+
+      .splide__list{
+      .splide__slide{
+    .vitamin-card {
+      box-shadow: var(--black) 1px 2px 6px;
+
+      width: 45%;
+      margin-bottom: 1rem;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      img {
+        width: 50%;
+      }
+      h4 {
+        padding-top: 1rem;
+      }
+    }
+ 
+  }
+  
+}}}
+}
+.doctor-reviews {
+  h2 {
+    .secondary-bttn-light {
+      padding: 0.3rem 0.5rem;
+    }
+  }
+  .doctor-review-cards {
+    justify-content: center;
+    padding: 1rem 0.2rem;
+    .doctor-review {
+      box-shadow: var(--black) 1px 2px 6px;
+      margin-bottom: 1rem;
+      padding: 1rem 0.5rem;
+      width: 95%;
+      p {
+        font-family: nexafont-bold;
+      }
+      figure {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 20%;
+          border-radius: 100%;
+        }
+        figcaption {
+          width: 70%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          padding-left: 1.5rem;
+          h4 {
+            text-align: left;
+          }
+          button {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.5rem;
+            background-color: var(--light-blue);
+            color: var(--light-blue-text);
+            font-family: nexafont-bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.faq-section {
+  ul {
+    .doctor-info-heading {
+      color: var(--light-blue-text);
+      font-family: nexafont-bold;
+
+      padding: 1rem 0;
+      width: 100%;
+      outline: none;
+
+      text-align: left;
+
+      font-size: 1.2rem;
+      transition: 0.4s;
+      background-color: var(--white);
+    }
+
+    .doctor-info-para {
+      display: none;
+      background-color: var(--very-light-blue);
+      border: none;
+
+      overflow: hidden;
+      p {
+        text-align: left;
+        padding: 0.3rem;
+      }
+    }
+    .doctor-info-heading:after {
+      content: "\2B9F";
+
+      float: right;
+
+      font-size: 0.8rem;
+
+      background-color: var(--very-light-blue);
+      border-radius: 100%;
+      padding: 0.07rem 0.25rem;
+    }
+
+    .active:after {
+      content: "\2B9D";
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tvastra-plus-heading-package {
+    .tvastra-plus-heading {
+      h2 {
+        text-align: left;
+      }
+      p {
+        text-align: left;
+      }
+      padding-bottom: 11rem;
+    }
+    .packages-section {
+      background-image: linear-gradient(
+        to top,
+        rgba(248, 240, 240, 0),
+        var(--light-blue)
+      );
+      height: 44rem;
+      .all-3-package {
+        width: 90%;
+        position: absolute;
+        background-color: var(--white);
+        padding: 1.5rem 0.5rem;
+        top: 22%;
+        box-shadow: var(--black) 3px 5px 24px;
+        border-radius: 0.5rem;
+        h3 {
+          line-height: 1.6rem;
+        }
+        .package-para {
+          border-bottom: 1px solid var(--light-grey-txt);
+        }
+        .healcthcare-package {
+          height: 35rem;
+          width: 33.3%;
+
+          h4 {
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--light-grey-txt);
+            padding-bottom: 1rem;
+          }
+          p {
+            padding: 0.5rem;
+          }
+          .price {
+            padding-top: 3rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 0;
+            span {
+              color: var(--dark-blue);
+              font-size: 1rem;
+            }
+          }
+
+          .secondary-bttn-light {
+            margin-right: 5%;
+            margin-left: 23%;
+          }
+        }
+        .advance-plan {
+          border-left: 1px solid var(--light-blue-text);
+          border-right: 1px solid var(--light-blue-text);
+
+          h4 {
+            padding-top: 0rem;
+          }
+          .popular {
+            font-size: 1rem;
+            top: 4%;
+            right: 44%;
+          }
+        }
+      }
+    }
+  }
+  .trusted-section {
+    justify-content: center;
+    .star-num-div {
+      width: 40%;
+
+      flex-direction: column;
+
+      .num-star {
+        font-size: 3.5rem;
+      }
+      .star {
+        width: 30%;
+        font-size: 0.9rem;
+      }
+    }
+    .rating-line {
+      width: 46%;
+    }
+    .trusted-icons {
+      .trusted-icons-card {
+        width: 22%;
+      }
+    }
+  }
+  .benefits-section {
+    align-items: flex-start;
+
+    ul {
+      width: 49%;
+      h2 {
+        text-align: left;
+      }
+    }
+
+    .hospitals-onboard {
+      width: 50%;
+
+      p {
+        padding: 1rem;
+      }
+    }
+  }
+  .consultation-section {
+    .consultation-card {
+      margin-bottom: 2rem;
+      flex-direction: row-reverse;
+
+      ul {
+        width: 48%;
+        h2 {
+          text-align: left;
+        }
+        li {
+          display: flex;
+          flex-direction: row;
+          padding: 0rem;
+
+          i {
+            font-size: 1.2rem;
+            color: var(--light-blue);
+            padding-right: 0.3rem;
+          }
+          p {
+            width: 90%;
+            text-align: left;
+          }
+        }
+      }
+      figure {
+        width: 50%;
+
+        border-radius: 1rem;
+        overflow: hidden;
+
+        box-shadow: var(--black) 1px 3px 10px;
+      }
+    }
+    .flat-20-div {
+      flex-direction: row;
+    }
+    h5 {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+    .vitamin-cards {
+      padding-top: 1rem;
+      justify-content: center;
+      .vitamin-card {
+        box-shadow: var(--black) 1px 2px 6px;
+
+        width: 45%;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        img {
+          width: 50%;
+        }
+        h4 {
+          padding-top: 1rem;
+        }
+      }
+      .margin-card {
+        margin-right: 0.7rem;
+      }
+    }
+    .swipe-bttn {
+      width: 8%;
+
+      margin-left: 46%;
+      button {
+        padding: 0.5rem;
+      }
+    }
+  }
+  .doctor-reviews {
+    h2 {
+      text-align: left;
+      .secondary-bttn-light {
+        padding: 0.5rem 1.3rem;
+        font-size: 1.2rem;
+      }
+    }
+    .doctor-review-cards {
+      justify-content: space-between;
+
+      .doctor-review {
+        width: 49%;
+      }
+    }
+  }
+  .faq-section {
+    h2 {
+      text-align: left;
+    }
+  }
+}
+/*------------Web-View-----------*/
+@media (min-width: 1024px) {
+  .tvastra-plus-heading-package {
+    .tvastra-plus-heading {
+      .secondary-bttn-light {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin: 0;
+      }
+      h2 {
+        text-align: left;
+        padding: 0;
+      }
+      p {
+        text-align: left;
+        padding-bottom: 6rem;
+        margin: 0;
+      }
+
+      height: 33rem;
+    }
+    .packages-section {
+      background-image: linear-gradient(
+        to top,
+        rgba(248, 240, 240, 0),
+        var(--light-blue)
+      );
+      height: 44rem;
+      .all-3-package {
+        width: 90%;
+        position: absolute;
+        background-color: var(--white);
+        padding: 1.5rem 0.5rem;
+        top: 30%;
+        box-shadow: var(--black) 3px 5px 24px;
+        border-radius: 0.5rem;
+        h3 {
+          line-height: 1.6rem;
+          padding-top: 1.5rem;
+        }
+        .package-para {
+          border-bottom: 1px solid var(--light-grey-txt);
+          text-align: center;
+        }
+        .healcthcare-package {
+          height: 35rem;
+          width: 33.3%;
+          padding-bottom: 2rem;
+          h4 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--light-grey-txt);
+            padding-bottom: 1rem;
+          }
+          p {
+            padding: 0.5rem;
+          }
+          .price {
+            padding-top: 3rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 0;
+            span {
+              color: var(--dark-blue);
+              font-size: 1rem;
+            }
+          }
+
+          .secondary-bttn-light {
+            margin-right: 5%;
+            margin-left: 34%;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+          }
+        }
+        .advance-plan {
+          border-left: 1px solid var(--light-blue-text);
+          border-right: 1px solid var(--light-blue-text);
+
+          h4 {
+            padding-top: 0rem;
+          }
+          .popular {
+            font-size: 1rem;
+            top: -1%;
+            right: 47%;
+          }
+        }
+      }
+    }
+  }
+  .trusted-section {
+    justify-content: center;
+    h2 {
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+    p {
+      text-align: center;
+      width: 80%;
+    }
+    .star-num-div {
+      width: 30%;
+
+      flex-direction: column;
+
+      .num-star {
+        font-size: 3.5rem;
+      }
+      .star {
+        width: 20%;
+        font-size: 0.9rem;
+      }
+    }
+    .review {
+      text-align: center;
+    }
+    .rating-line {
+      width: 30%;
+    }
+    .trusted-icons {
+      width: 80%;
+      .trusted-icons-card {
+        width: 22%;
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .benefits-section {
+    align-items: flex-start;
+    margin: 0;
+    padding-bottom: 0;
+
+    p {
+      text-align: center;
+      padding-bottom: 1rem;
+      margin: 0 8rem 4rem 28rem;
+      width: 30%;
+      border-bottom: 0.3rem solid var(--light-grey-txt);
+      border-radius: 0.2rem;
+    }
+
+    ul {
+      width: 59%;
+      h2 {
+        text-align: left;
+      }
+      li {
+        i {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        text-align: left;
+        margin: 0;
+        border-bottom: none;
+      }
+    }
+
+    .hospitals-onboard {
+      width: 30%;
+
+      padding: 0;
+      figure {
+        height: 8rem;
+        padding: 0;
+      }
+      p {
+        padding: 0rem;
+      }
+    }
+  }
+  .consultation-section {
+    .consultation-card {
+      margin-bottom: 4rem;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      ul {
+        width: 63%;
+        h2 {
+          text-align: left;
+          line-height: 2.5rem;
+        }
+        li {
+          display: flex;
+          flex-direction: row;
+          padding: 0rem;
+
+          i {
+            font-size: 1.5rem;
+            color: var(--light-blue);
+            padding-right: 0.8rem;
+          }
+          p {
+            width: 90%;
+            text-align: left;
+          }
+        }
+      }
+      figure {
+        width: 30%;
+
+        border-radius: 1rem;
+        overflow: hidden;
+
+        box-shadow: var(--black) 1px 3px 10px;
+      }
+    }
+    .flat-20-div {
+      flex-direction: row;
+    }
+    h5 {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+    .vitamin-cards {
+      .splide__arrows{
+        display: none;
+      }
+      .splide__pagination{
+        width: 10%;
+       
+        position: absolute;
+        top:93%;
+       left: 3%;
+         li{
+           width: 25%;
+           .splide__pagination__page{
+             opacity: 1;
+              background-color: var(--light-grey-txt);
+             transition: none;
+             padding: .4rem;
+     
+         &:hover{
+            opacity: 1;
+         }
+      
+           }
+         }
+      }
+      .splide__pagination__page.is-active {
+        transform: scale(1);
+      
+        border: 3px solid var(--light-blue-text);
+    
+    }
+     
+      .splide__track{
+         padding: 0 1rem;
+    height: 26rem;
+      .splide__list{
+      .splide__slide{
+        flex-wrap: nowrap;
+      padding-top: 1rem;
+
+
+        
+        box-shadow: var(--black) 1px 2px 6px;
+        margin: 0.6rem;
+     
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        img {
+          width: 50%;
+        }
+        h4 {
+          padding-top: 1rem;
+        }
+        p{
+          text-align: center;
+        }
+       
+      
+    }
+  }
+}
+    
+}
+  }
+  .doctor-reviews {
+    h2 {
+      text-align: left;
+      .secondary-bttn-light {
+        padding: 0.5rem 1.3rem;
+        font-size: 1.2rem;
+      }
+    }
+    .doctor-review-cards {
+      justify-content: space-between;
+
+      .doctor-review {
+        padding: 1rem;
+        width: 32%;
+      }
+    }
+  }
+  .faq-section {
+    ul {
+      .doctor-info-heading {
+        font-size: 1.6rem;
+      }
+      .doctor-info-heading:after {
+        font-size: 1rem;
+      }
+
+      .active:after {
+        font-size: 1rem;
+      }
+    }
+
+    h2 {
+      text-align: left;
+    }
+  }
+}

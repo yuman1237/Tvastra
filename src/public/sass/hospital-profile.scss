@@ -1,0 +1,345 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(177, 174, 174);
+  --black: black;
+  --very-light-blue: #b4daf3;
+}
+.contact-heading {
+  padding: 0;
+
+  figure {
+    position: relative;
+    height: 18rem;
+
+    h2 {
+      position: absolute;
+
+      top: 40%;
+      color: var(--white);
+    }
+    p {
+      position: absolute;
+
+      color: var(--white);
+
+      top: 55%;
+    }
+  }
+}
+.profile-section {
+  padding-top: 1rem;
+  div {
+    border: 1px solid var(--light-grey-txt);
+    padding: 0.6rem;
+    figure {
+      button {
+        margin-top: 0.5rem;
+        width: 100%;
+      }
+    }
+    article {
+      padding-top: 2rem;
+      h2 {
+        position: relative;
+        color: var(--light-blue-text);
+        margin-left: 2.5rem;
+        text-align: left;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -65%;
+          left: -25%;
+          width: 3.7rem;
+
+          height: 100%;
+          border-bottom: 3px solid var(--light-blue-text);
+        }
+      }
+      .bed-para-div{
+        border:none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        .bed-para{
+         font-size: 1rem;
+          width: 100%;
+
+       
+          span {
+            i {
+              font-size: 1.2rem;
+           
+         
+            }
+          }
+        }}
+      p {
+        padding-bottom: 2rem;
+        text-align: left;
+        span {
+          i {
+            font-size: 1rem;
+            color: var(--light-blue-text);
+          }
+          .fa-map-marker-alt {
+            padding-right: 0.4rem;
+          }
+        }
+      }
+
+      ul {
+        .doctor-info-heading {
+          color: var(--light-blue-text);
+          font-family: nexafont-bold;
+
+          padding: 0.5rem;
+          width: 100%;
+          outline: none;
+
+          text-align: left;
+          border-top: 1px dashed var(--light-grey-txt);
+          border-bottom: 1px dashed var(--light-grey-txt);
+
+          font-size: 1.2rem;
+          transition: 0.4s;
+          background-color: var(--white);
+          span {
+            i {
+              font-size: 1.2rem;
+              color: var(--light-blue-text);
+              padding-right: 1rem;
+            }
+            .fa-stethoscope {
+              padding-right: 0.7rem;
+            }
+            .fa-hospital {
+              padding-right: 0.7rem;
+            }
+            .fa-star {
+              padding-right: 0.4rem;
+            }
+            .fa-trophy {
+              padding-right: 0.7rem;
+            }
+            .fa-map-marker-alt {
+              padding-right: 0.9rem;
+            }
+            .fa-rupee-sign {
+              padding-right: 1.23rem;
+            }
+          }
+        }
+
+        .doctor-info-para {
+          display: none;
+          background-color: var(--very-light-blue);
+          border: none;
+
+          overflow: hidden;
+          p {
+            text-align: left;
+            padding: 0.3rem;
+          }
+        }
+        .doctor-info-heading:after {
+          content: "\2B9F";
+
+          float: right;
+
+          font-size: 0.8rem;
+
+          background-color: var(--very-light-blue);
+          border-radius: 100%;
+          padding: 0.07rem 0.2rem;
+        }
+
+        .active:after {
+          content: "\2B9D";
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+.need-help-section {
+  background-color: var(--light-blue);
+  h2 {
+    color: var(--white);
+  }
+  p {
+    padding-left: 0.2rem;
+  }
+}
+/*------------Ipad-View-----------*/
+@media (min-width: 767px) and (max-width: 1024px) {
+  .profile-section {
+    div {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 19rem 2fr;
+      grid-gap: 1rem;
+      figure {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      
+        margin-bottom: 6rem;
+        button {
+          padding: 0.7rem 0;
+        }
+      }
+      article {
+        padding-top: 1rem;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        h2 {
+          margin-left: 1.1rem;
+          text-align: left;
+          &::before {
+            left: -12%;
+            width: 2.7rem;
+          }
+        }
+        .bed-para-div{
+     
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+          .bed-para{
+           font-size: .9rem;
+            width: 45%;
+            padding-left: 1rem;
+         
+            span {
+              i {
+                font-size: 1.2rem;
+             
+           
+              }
+            }
+          }}
+        p {
+          text-align: left;
+          line-height: 1.6rem;
+        }
+        ul {
+          .doctor-info-heading {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .need-help-section {
+    flex-direction: column;
+  }
+}
+
+/*-----------Web-View--------------*/
+@media (min-width: 1025px) {
+  .contact-heading {
+    figure {
+    
+      h2 {
+        left: 5%;
+      }
+      p {
+        left: 5%;
+      }
+    }
+  }
+  .profile-section {
+    div {
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 3.5fr 1fr;
+      grid-template-rows: 16rem 2fr;
+      grid-gap: 1rem;
+      figure {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    
+        height: 100%;
+      }
+      article {
+        padding-top: 1rem;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        h2 {
+          margin-left: 0rem;
+          text-align: left;
+          &::before {
+            left: -7%;
+            width: 4rem;
+            border-bottom: 3px solid var(--light-blue-text);
+          }
+        }
+        .bed-para-div{
+        border:none;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        .bed-para{
+         font-size: 1rem;
+          width: 45%;
+
+       
+          span {
+            i {
+              font-size: 1.2rem;
+           
+         
+            }
+          }
+        }}
+        p {
+     
+
+          padding-top: 1rem;
+          text-align: left;
+          line-height: 2rem;
+          
+        }
+        ul {
+          .doctor-info-heading {
+            padding:  1.5rem 0;
+            font-size: 1.6rem;
+            span {
+              i {
+                font-size: 1.5rem;
+              }
+            }
+          }
+          .doctor-info-heading:after {
+            font-size: 1rem;
+
+            padding: 0.08rem 0.3rem;
+          }
+          .doctor-info-para{
+            padding: 1rem;
+          }
+          .active:after {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .need-help-section {
+    padding-top: 4rem;
+    flex-direction: row;
+    height: 12rem;
+    p {
+      padding: 0;
+    }
+  }
+}

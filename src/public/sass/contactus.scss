@@ -1,0 +1,245 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(139, 139, 139);
+  --black: black;
+}
+.contact-heading {
+  padding: 0;
+
+  figure {
+    position: relative;
+    height: 18rem;
+
+    h2 {
+      position: absolute;
+
+      top: 40%;
+      color: var(--white);
+    }
+    p {
+      position: absolute;
+
+      color: var(--white);
+
+      top: 55%;
+    }
+  }
+}
+.map-section {
+  iframe {
+    height: 14rem;
+    width: 100%;
+  }
+}
+.send-message-section {
+  padding: 0;
+  ul {
+    padding: 2rem 1rem 0.5rem 1rem;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      i {
+        color: var(--light-blue-text);
+
+        font-size: 1.5rem;
+      }
+      h4 {
+        width: 60%;
+
+        text-align: left;
+        padding-left: 0.5rem;
+      }
+      p {
+        width: 100%;
+        font-size: 0.8rem;
+
+        text-align: left;
+        padding-left: 2.3rem;
+      }
+    }
+  }
+  form {
+    background-color: var(--light-blue);
+    .name {
+      margin-top: 1rem;
+    }
+    input {
+      margin-top: 0.5rem;
+      width: 90%;
+      margin-bottom: 0;
+    }
+    .secondary-bttn-light {
+      border-radius: 0;
+      margin: 0.5rem 0 1rem 11.5rem;
+    }
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .map-section {
+    iframe {
+      height: 18rem;
+      width: 100%;
+    }
+  }
+  .send-message-section {
+    ul {
+      padding: 1.5rem 1rem 0.5rem 2rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      li {
+        width: 33%;
+
+        h4 {
+          width: 70%;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-gap: 0.2rem;
+      input {
+        margin-top: 0;
+      }
+      .name {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-left: 2rem;
+      }
+      .address {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin-left: 2rem;
+      }
+      .subject {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 2rem;
+      }
+      .message {
+        grid-column: 2/3;
+        grid-row: 1/4;
+
+        padding-top: 22%;
+        padding-bottom: 20%;
+        margin-top: 0.5rem;
+      }
+      .secondary-bttn-light {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        width: 50%;
+        margin-left: 9.6rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact-heading {
+    figure {
+      height: 22rem;
+      h2 {
+        padding-left: 9rem;
+      }
+      p {
+        padding-left: 9rem;
+      }
+    }
+  }
+  .map-section {
+    iframe {
+      height: 22rem;
+      width: 100%;
+    }
+  }
+  .send-message-section {
+    justify-content: space-between;
+    border-bottom: 1px solid var(--light-grey-txt);
+    padding: 2rem 9rem;
+    // border: 1px solid black;
+
+    ul {
+      width: 25%;
+      // border: 1px solid black;
+      padding: 0;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      li {
+        width: 100%;
+
+        h4 {
+          width: 70%;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+    form {
+      height: 20rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+
+      width: 75%;
+
+      input {
+        margin-top: 0;
+        padding: 1.1rem;
+        border: 1px solid var(--light-grey);
+      }
+      .name {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-left: 2rem;
+      }
+      .address {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin-left: 2rem;
+      }
+      .subject {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .message {
+        grid-column: 2/3;
+        grid-row: 1/4;
+
+        width: 94%;
+
+        padding-top: 19%;
+        padding-bottom: 19%;
+      }
+      .secondary-bttn-light {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        margin-top: 0;
+        padding: 1rem;
+        font-size: 1.2rem;
+        width: 40%;
+        margin-left: 15.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/dashboard.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark">Get a Qoute</button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">Admin</button>
+
+
+                <div class="dropdown-content">
+                    <a href="#" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/vector-users-icon.webp" alt="">
+                            </figure>
+                            <span> <big>Administrator</big>
+                                <small>9876545674</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section>
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a href="admin_dashboard" class="links"><i class="fas fa-user-alt"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li><a href="Admin_User"><i class="fa fa-th-list"></i> <span>Users</span>
+                        </a></li>
+                    <li><a href="Admin_Doctor"><i class="far fa-calendar-check"></i> <span>Doctors</span> </a></li>
+                    <li><a href="Admin_hospital"><i class="fa fa-file-alt"></i> <span>Hospitals</span> </a></li>
+                    <li><a href="admin_settings"><i class="fa fa-user-cog"></i> <span> Settings</span></a></li>
+
+                </ul>
+            </div>
+            <div class="hospital_survey">
+                <div class="counts_user">
+                    <div class="count">
+                        <i class="fas fa-briefcase-medical"></i>
+                        <div class="heading">
+                            <h3>User</h3>
+                            <h3>52</h3>
+                        </div>
+                    </div>
+                    <div class="count">
+                        <i class="fas fa-syringe"></i>
+                        <div class="heading">
+                            <h3>Doctors</h3>
+                            <h3>12</h3>
+                        </div>
+                    </div>
+                    <div class="count">
+                        <i class="fas fa-user-md"></i>
+                        <div class="heading">
+
+                            <h3>Hospitals</h3>
+                            <h3>10</h3>
+                        </div>
+                    </div>
+                    <div class="count">
+                        <i class="fas fa-briefcase-medical"></i>
+                        <div class="heading">
+                            <h3>Appointments</h3>
+                            <h3>152</h3>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="img-survey">
+                    <h3>Hospital Survey</h3>
+                    <figure>
+                        <img src="./uploads/canvas.png" alt="">
+                    </figure>
+
+                </div>
+                <div class="img-survey">
+                    <h3>Patient Age</h3>
+                    <figure>
+                        <img src="./uploads/canvasPieChart.png" alt="">
+                    </figure>
+
+                </div>
+                <div class="patient-record" data-page='{{page}}'>
+                    <h3>Patient Enrolled</h3>
+
+                    <div class="table_view">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <td>
+                                        <h3>Name</h3>
+                                    </td>
+                                    <td>
+                                        <h3>Phone Number</h3>
+                                    </td>
+                                    <td>
+                                        <h3>Email</h3>
+                                    </td>
+                                    <td>
+                                        <h3>Actions</h3>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each user}}
+                                <tr>
+                                    <td>
+                                        <h5>{{patient}}</h5>
+                                    </td>
+                                    <td>
+                                        <h5> {{mobile_number}}</h5>
+                                    </td>
+                                    <td>
+                                        <h5>{{patient_email}}</h5>
+                                    </td>
+                                    <td>
+                                        <h5> <a href="/adminUserAllAppointments_patient?id={{_id}}">Appointment
+                                                Details</a></h5>
+                                    </td>
+                                </tr>
+                                {{/each}}
+
+
+
+
+                            </tbody>
+
+
+
+                        </table>
+
+                    </div>
+                    <div class="pagenationContainer">
+                        <ul>
+
+                            <li id="bttn-img">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=1&size=5">1</a>
+                            </li>
+
+                            <li id="bttn-img">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=2&size=5">2</a>
+                            </li>
+
+                            <li id="bttn-img" data-img="data-img-3">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=3&size=5">3</a>
+                            </li>
+
+                            <li id="pagenationTo_4">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=4&size=5">4</a>
+                            </li>
+
+                            <li id="pagenationTo_5">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=5&size=5">5</a>
+                            </li>
+
+                            <li id="pagenationTo_6">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=6&size=5">6</a>
+                            </li>
+
+                            <li id="pagenationTo_7">
+                                <a class="pageIndexLink" href="/admin_dashboard?page=7&size=5">7</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+<script>
+    let pages = document.querySelector(".patient-record").getAttribute("data-page");
+    let index = document.querySelectorAll(".pageIndexLink");
+
+    index.forEach((e) => {
+        if (e.innerText == pages) {
+            e.parentElement.classList.add("page-active");
+        }
+    })
+</script>
+
+</html>

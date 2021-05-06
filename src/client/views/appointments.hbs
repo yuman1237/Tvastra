@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/appointments.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css">
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>Appointments</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="#" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section>
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a href="profile"><i class="fas fa-user-alt"></i> <span>Profile</span> </a>
+                    </li>
+                    <li><a href="appointments" class="links"><i class="fa fa-th-list"></i> <span>Appointments</span>
+                        </a></li>
+                    {{#if doctor}}
+                    <li><a href="schedules"><i class="far fa-calendar-check"></i> <span>Schedules</span> </a></li>
+                    {{/if}}
+                    <li><a href="medicalreports"><i class="fa fa-file-alt"></i> <span>Medical Reports</span> </a></li>
+                    <li><a href="settings"><i class="fa fa-user-cog"></i> <span> Settings</span></a></li>
+
+                </ul>
+            </div>
+            <div class="appointment">
+                <div class="appointment-sub">
+                    <h3>Upcoming Appointments</h3>
+                    <div class="container">
+
+                    </div>
+                </div>
+                <div class="appointment-sub">
+                    <h3>Completed Appointments</h3>
+                    <div class="complete-container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script>
+
+
+        window.onload = OnPageLoad();
+
+
+        let complete = document.querySelector(".complete-container");
+        let pending = document.querySelector(".container");
+
+        async function OnPageLoad() {
+
+            var result = await fetch(`/fetchappointments`);
+            result.text().then((user) => {
+                let user1 = JSON.parse(user);
+
+                user1.forEach((val) => {
+                    if (moment().subtract(1, "days").isAfter(moment(val.date))) {
+                        let d = document.createElement('div');
+                        if (val.patient) {
+                            let struct = `
+                        
+                      <div class="appoint">
+                              <big data-date="">
+                                      ${moment(val.date).format("MMM D")}
+                                      
+                              </big>
+                              <div>
+                                  <p class="name">${val.patient}</p>
+                                  <small class="day-from">${moment(val.date).format("ddd")} &nbsp ${val.from}
+                            </small>
+                                  <small>${val.hospital}</small>
+                                  <p class="status" style=" background-color: green;">Completed</p>
+                              </div>
+                          </div>
+
+                        `;
+                            d.innerHTML = struct;
+                            complete.appendChild(d);
+
+                        }
+                        else {
+                            let struct = `
+                        
+                      <div class="appoint">
+                              <big data-date="">
+                                      ${moment(val.date).format("MMM D")}
+                                      
+                              </big>
+                              <div>
+                                  <p class="name"> Dr. ${val.doctor}</p>
+                                  <small class="day-from">${moment(val.date).format("ddd")} &nbsp ${val.from}
+                            </small>
+                                  <small>${val.hospital}</small>
+                                  <p class="status" style=" background-color: green;">Completed</p>
+                              </div>
+                          </div>
+
+                        `;
+                            d.innerHTML = struct;
+                            complete.appendChild(d);
+                        }
+
+                    }
+                    else {
+                        let d = document.createElement('div');
+                        if (val.patient) {
+                            let struct = `
+
+                        <div class="appoint">
+                              <big data-date="">
+                                ${moment(val.date).format("MMM D")}
+                              </big>
+                              <div>
+                                  <p class="name">${val.patient}</p>
+                                  <small class="day-from">${moment(val.date).format("ddd")
+                                }  &nbsp ${val.from}</small>
+                                  <small>${val.hospital}</small>
+                                  <p class="status">Pending</p>
+                              </div>
+                          </div>
+
+                  `;
+                            d.innerHTML = struct;
+                            pending.appendChild(d);
+                        }
+                        else {
+                            let struct = `
+
+                        <div class="appoint">
+                              <big data-date="">
+                                ${moment(val.date).format("MMM D")}
+                              </big>
+                              <div>
+                                  <p class="name"> Dr. ${val.doctor}</p>
+                                  <small class="day-from">${moment(val.date).format("ddd")
+                                }  &nbsp ${val.from}</small>
+                                  <small>${val.hospital}</small>
+                                  <p class="status">Pending</p>
+                              </div>
+                          </div>
+
+                  `;
+                            d.innerHTML = struct;
+                            pending.appendChild(d);
+                        }
+                    }
+                })
+
+            })
+
+        }
+
+
+    </script>
+</body>
+
+</html>

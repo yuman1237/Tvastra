@@ -1,0 +1,153 @@
+section {
+  padding-top: 2rem;
+  background-color: var(--light-grey);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .clinic {
+  background-color: var(--white);
+  width: 40%;
+  padding: 1rem;
+}
+
+section .clinic h3 {
+  color: var(--light-blue-text);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--light-grey-txt);
+  font-size: 1.8rem;
+}
+
+section .clinic ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+}
+
+section .clinic ul li {
+  width: 50%;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section .clinic ul li i {
+  padding-top: 0.2rem;
+  color: var(--light-blue-text);
+  width: 8%;
+}
+
+section .clinic ul li p {
+  width: 88%;
+  padding: 0;
+  display: inline-block;
+  font-size: 1rem;
+  padding-left: 1rem;
+  color: var(--dark-blue);
+}
+
+section .clinic ul li a {
+  text-decoration: none;
+  font-family: nexafont-bold;
+  color: var(--light-blue-text);
+}
+
+section .clinic figure {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .clinic figure img {
+  width: 30%;
+  height: 7rem;
+}
+
+section .clinic figure figcaption {
+  width: 65%;
+  height: 5rem;
+}
+
+section .clinic figure figcaption h5 {
+  text-align: left;
+}
+
+section .clinic figure figcaption h5 span {
+  color: var(--light-blue-text);
+}
+
+section .confirmed {
+  width: 55%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+section .confirmed h2 {
+  text-align: left;
+  font-size: 2rem;
+}
+
+section .confirmed h2 i {
+  font-size: 1.8rem;
+  color: var(--green);
+}
+
+section .confirmed h4 {
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+section .confirmed big {
+  width: 100%;
+  font-size: 1.1rem;
+  font-family: nexafont-bold;
+  color: var(--light-blue-text);
+  padding-bottom: 0.8rem;
+}
+
+section .confirmed small {
+  width: 100%;
+  font-family: nexafont;
+  font-size: 1.1rem;
+  padding-bottom: 0.8rem;
+}
+
+section .confirmed .buttons {
+  width: 90%;
+  padding-top: 2rem;
+}
+
+section .confirmed .buttons .secondary-bttn-light {
+  padding: 1.1rem;
+  font-size: 1.2rem;
+}
+
+section .confirmed .buttons .secondary-bttn-light a {
+  color: white;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=confirmbooking.css.map */

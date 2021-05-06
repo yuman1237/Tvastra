@@ -1,0 +1,183 @@
+.visible {
+  display: block !important;
+}
+
+.active {
+  background-color: var(--light-blue-text) !important;
+}
+
+.active .pageIndexLink {
+  color: white !important;
+}
+
+nav {
+  -webkit-box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+          box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+}
+
+.nav-buttns .secondary-bttn-dark {
+  visibility: hidden;
+}
+
+@media (min-width: 1025px) {
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section .dashboard {
+    width: 28%;
+  }
+  main section .dashboard h3 {
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  main section .dashboard ul li {
+    width: 95%;
+    margin-bottom: 0.2rem;
+  }
+  main section .dashboard ul li a {
+    display: inline-block;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  main section .dashboard ul li a i {
+    color: var(--light-blue-text);
+    width: 2rem;
+  }
+  main section .dashboard ul li a span {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+  }
+  main section .dashboard ul li a:hover {
+    background-color: var(--light-grey);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li a:hover span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .dashboard ul li .links {
+    background-color: var(--light-grey);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li .links span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .hospital_survey {
+    width: 72%;
+  }
+  main section .hospital_survey h2 {
+    padding-bottom: 2rem;
+  }
+  main section .hospital_survey .users {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+  }
+  main section .hospital_survey .users figure {
+    position: relative;
+    border: 2px solid var(--light-grey-txt);
+  }
+  main section .hospital_survey .users figure img {
+    height: 20rem;
+  }
+  main section .hospital_survey .users figure .menuicon {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+  main section .hospital_survey .users figure .menuicon div {
+    border-radius: 100%;
+    width: 8%;
+    padding: 0.5rem 0.9rem;
+    background-color: black;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+  }
+  main section .hospital_survey .users figure .menuicon div i {
+    color: white;
+    font-size: 0.8rem;
+  }
+  main section .hospital_survey .users figure .menuicon div:hover {
+    background-color: white;
+    border: 1px solid black;
+  }
+  main section .hospital_survey .users figure .menuicon div:hover i {
+    color: black;
+  }
+  main section .hospital_survey .users figure .menuItems {
+    position: absolute;
+    background-color: white;
+    width: 70%;
+    top: 10%;
+    left: 2%;
+    z-index: 4;
+    padding: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 0.9;
+  }
+  main section .hospital_survey .users figure .menuItems li {
+    width: 100%;
+    padding: 0.3rem;
+  }
+  main section .hospital_survey .users figure .menuItems li a {
+    color: var(--dark-blue);
+  }
+  main section .hospital_survey .users figure .menuItems li:hover {
+    background-color: var(--light-grey);
+  }
+  main section .hospital_survey .users figure .menuItems li:hover a {
+    font-size: 1.2rem;
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .hospital_survey .users figure figcaption {
+    padding: 1rem 0rem;
+  }
+  main section .hospital_survey .users figure figcaption h4 {
+    text-align: left;
+    padding: 0rem 1.8rem 0.5rem 1.8rem;
+    color: var(--light-blue-text);
+    position: relative;
+  }
+  main section .hospital_survey .users figure figcaption h4::before {
+    content: "";
+    left: 0%;
+    top: 30%;
+    width: 1.5rem;
+    position: absolute;
+    border-bottom: 3px solid var(--light-blue-text);
+  }
+  main section .hospital_survey .users figure figcaption ul li {
+    padding: 0.5rem 1.8rem;
+  }
+  main section .hospital_survey .users figure figcaption ul li i {
+    color: var(--light-blue-text);
+    width: 13%;
+  }
+  main section .hospital_survey .users figure figcaption ul li span {
+    color: var(--dark-blue);
+  }
+}
+/*# sourceMappingURL=admin_user.css.map */

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/medicalreports.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css">
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>Show Records</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section>
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a href="profile"><i class="fas fa-user-alt"></i> <span>Profile</span> </a>
+                    </li>
+                    <li><a href="appointments"><i class="fa fa-th-list"></i> <span>Appointments</span>
+                        </a></li>
+                    <li><a href="schedules"><i class="far fa-calendar-check"></i> <span>Schedules</span>
+                        </a></li>
+                    <li><a href="medicalreports"><i class="fa fa-file-alt"></i> <span>Medical
+                                Reports</span> </a></li>
+                    <li><a href=""><i class="fa fa-user-cog"></i> <span> Settings</span></a></li>
+
+                </ul>
+            </div>
+            <div class="medical_div">
+                <div class="account">
+                    <h2>Records</h2>
+                    {{#if doctor}}
+                    <button class="secondary-bttn-light" onclick="openModelBox();">Add Record</button>
+                    {{/if}}
+                </div>
+                <div class="medical-container">
+
+                    <div class="record-container">
+                        {{#each user as |value key|}}
+                        {{#each myfile}}
+                        <div class="sub-record">
+                            <div>
+                                <p>{{value.title}}</p>
+                                {{#if value.doctorname}}
+                                <i class="fas fa-trash-alt"
+                                    onclick="window.location.href='/deleterecordfile?id={{value._id}}&file_id={{_id}}'"></i>
+                                {{/if}}
+                            </div>
+                            <figure>
+                                <img src="./uploads/{{file}}" alt="">
+                            </figure>
+
+                        </div>
+                        {{/each}}
+                        {{/each}}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="model-box-background" style="display: none;">
+        <form class="model-box" action="/addReportPic" method="POST" enctype="multipart/form-data"
+            style="transform: scale(0);">
+            <div class="photos">
+                <div class="selected-photos"></div>
+                <div class="add-photo">
+                    <input type="hidden" name="reportId" value="{{id}}">
+                    <input type="file" name="myfile" id="reportPic" accept="image/*" multiple="" max="5" required="">
+                    <label for="reportPic"><i class="fa fa-plus"></i><span>Add Photo</span></label>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" class="danger" onclick="closeModelBox()">Cancel</button>
+                <button type="submit" class="success">Done</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    const ModelBoxBg = document.getElementsByClassName("model-box-background")[0];
+    const ModelBox = document.getElementsByClassName("model-box")[0];
+
+    function closeModelBox() {
+        ModelBox.style.animation = "none)";
+        ModelBox.style.transform = "scale(0)";
+        setTimeout(() => {
+            ModelBoxBg.style.display = "none";
+        }, 100);
+    }
+    function openModelBox(param) {
+        ModelBoxBg.style.display = "flex";
+        ModelBox.style.transform = "scale(1)";
+        modelBoxParam = param; // global variable for further use
+    };
+
+
+
+    (function () {
+        const reportPicInput = document.getElementById("reportPic");
+        var selectedPhotoContainer = document.querySelector(".selected-photos");
+
+        reportPicInput.addEventListener("change", e => {
+            if (reportPicInput.files.length > 5) {
+                alert("Maximum 5 files are allowed");
+                reportPicInput.value = null;
+                selectedPhotoContainer.innerHTML = '';
+            } else
+                if (reportPicInput.files.length) {
+                    selectedPhotoContainer.innerHTML = '';
+                    for (i = 0; i < reportPicInput.files.length; i++) {
+                        var imgElem = document.createElement("img");
+                        imgElem.src = URL.createObjectURL(reportPicInput.files[i]);
+                        selectedPhotoContainer.appendChild(imgElem);
+                        imgElem.onload = function () {
+                            URL.revokeObjectURL(this.src);
+                        }
+                    }
+                }
+        })
+    })();
+
+</script>
+
+</html>

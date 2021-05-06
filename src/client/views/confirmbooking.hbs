@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/confirmbooking.css">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section>
+            <div class="clinic">
+                <h3>In Clinic Appointment</h3>
+                <ul>
+                    <li> <i class="far fa-calendar-plus"></i>
+                        <p>{{user.date}}</p>
+                    </li>
+                    <li><i class="far fa-clock"></i>
+                        <p>From {{user.from}}</p>
+                    </li>
+                    <li><i class="far fa-clock"></i>
+                        <p>To {{user.to}}</p>
+                    </li>
+
+                </ul>
+                <figure>
+                    <img src="./uploads/{{pic}}" alt="">
+                    <figcaption>
+                        <h5> Doctor's Name: <span>{{user.doctor}}</span> </h5>
+                        <h5> Hospital: <span> {{user.hospital}}</span></h5>
+
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="https://static.lyfboat.com/lyfboat/uploads/hospital_images/1+-+Indraprastha+Apollo/Slider/indraprastha_apollo.jpg"
+                        alt="">
+                    <figcaption>
+
+                        <h5> Hospital: <span> {{user.hospital}}</span></h5>
+
+                    </figcaption>
+                </figure>
+
+            </div>
+            <div class="confirmed">
+                <h2><i class="fas fa-check-circle"></i> Appointment Confirmed! </h2>
+                <h4>We have send you an SMS with details </h4>
+                <big>
+                    Patient's Name:
+                </big>
+                <small>
+                    {{user.patient}}
+                </small>
+                <big>
+                    Patient's Number:
+                </big>
+                <small>
+                    {{user.mobile_number}}
+                </small>
+                <div class="buttons">
+                    <button type="submit" class="secondary-bttn-light"
+                        onclick="window.location.href='/deleteBooking?id={{user._id}}'">Remove
+                        Appointment</button>
+                    <button type="submit" class="secondary-bttn-light"> <a href="/doctor"> Reschedule
+                            Appointment</a></button>
+                </div>
+            </div>
+
+
+
+        </section>
+    </main>
+</body>
+
+</html>

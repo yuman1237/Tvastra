@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/bookappointment.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>Tvastra</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+            <a href="">Other Services</a>
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark">Get a Qoute</button>
+
+            </li>
+
+            <li>
+
+                <a href="."> <button class="primary-bttn username">{{name}}</button></a>
+
+
+            </li>
+
+
+
+        </ul>
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <section>
+        <form action="submit">
+            <h2>
+                Book an Appointment
+            </h2>
+            <h4 for="date">Select Appointment Date*</h4>
+            <input type="date" name="date">
+
+            <ul class="time-interval">
+
+                <h4 for="time-interval">Time Interval*</h4>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Morning</label>
+                </li>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Afternoon</label>
+                </li>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Evening</label>
+                </li>
+            </ul>
+
+            <ul class="time-interval">
+
+                <h4 for="time-interval">Appointment Status/Urgency*</h4>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Routine Check-up</label>
+                </li>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Non Urgent Check-up </label>
+                </li>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Urgent Check-up</label>
+                </li>
+                <li> <input type="radio" name="morning">
+                    <label for="morning">Surgical Appointment</label>
+                </li>
+            </ul>
+
+            <h4>
+                Upload Previous Health Record</h4>
+            <ul class="upload-record">
+                <li><button>Choose file</button><span>No file chosen</span></li>
+            </ul>
+
+
+            <h4>Appointment Details</h4>
+            <input class="appointment-input" type="text">
+
+            <button class="secondary-bttn-dark">BOOK APPOINTMENT <i class="fas fa-arrow-right"></i></button>
+
+        </form>
+        <h5>All Rights Reserved. © tvastra 2020 </h5>
+    </section>
+</body>
+
+</html>

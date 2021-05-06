@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/doctor-profile.css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>Doctor Profile</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section class="contact-heading">
+            <figure>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/contactUs.png" alt="">
+                <h2>About &nbsp;{{doc.name}}</h2>
+                <p>Home / Doctor Profile</p>
+
+            </figure>
+        </section>
+        <section class="profile-section">
+            <div>
+                <figure>
+                    <img src="/uploads/{{doc.myfile}}" alt="">
+                    <button class="secondary-bttn-dark">Book an Appointment</button>
+                </figure>
+                <article>
+                    <h2>{{doc.name}}</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. </p>
+
+
+                    <ul>
+                        <button class="doctor-info-heading"> <span><i
+                                    class="fas fa-award"></i></span>Specialization</button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="doctor-info-heading"><span><i class="fas fa-stethoscope"></i></span>List Of
+                            Treatments</button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="doctor-info-heading"><span><i class="fas fa-hospital"></i></span> Work Experience
+                        </button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="doctor-info-heading"> <span><i class="fas fa-star"></i></span>
+                            Qualification</button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="doctor-info-heading"> <span> <i class="fas fa-trophy"></i></span>Awards</button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="doctor-info-heading"> <span><i class="fas fa-map-marker-alt"></i></span>
+                            Location</button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="doctor-info-heading"> <span> <i class="fas fa-rupee-sign"></i></span>Avg
+                            Fees</button>
+                        <div class="doctor-info-para">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </ul>
+                </article>
+            </div>
+            <script>
+                var acc = document.getElementsByClassName("doctor-info-heading");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+        </section>
+        <section class="need-help-section">
+            <article>
+                <h2>Need Help?</h2>
+                <p>Just let us know, we will happy to assist you</p>
+            </article>
+            <button class="secondary-bttn-light sub-section">Submit your enquiry</button>
+        </section>
+    </main>
+    <footer>
+        <a href="." class="footer-img"><img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt=""></a>
+        <div class="footer-links">
+            <a href="doctor">Doctor</a>
+            <a href="hospital">Hospital</a>
+            <a href="">Treatment</a>
+            <a href="contactus">Contact Us</a>
+            <a href="">FAQs</a>
+        </div>
+        <div class="social-media-links">
+            <a href=""> <i class="fab fa-facebook-f"></i></a>
+
+            <a href=""> <i class="fab fa-pinterest-p"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+        <h5>All Rights Reserved. © tvastra 2018 </h5>
+    </footer>
+</body>
+
+</html>

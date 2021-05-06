@@ -1,0 +1,275 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(177, 174, 174);
+  --black: black;
+  --very-light-blue: #b4daf3;
+}
+
+.contact-heading {
+  padding: 0;
+}
+
+.contact-heading figure {
+  position: relative;
+  height: 18rem;
+}
+
+.contact-heading figure h2 {
+  position: absolute;
+  top: 40%;
+  color: var(--white);
+}
+
+.contact-heading figure p {
+  position: absolute;
+  color: var(--white);
+  top: 55%;
+}
+
+.profile-section div {
+  border: 1px solid var(--light-grey-txt);
+  padding: 0.6rem;
+}
+
+.profile-section div figure button {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.profile-section div article {
+  padding-top: 2rem;
+}
+
+.profile-section div article h2 {
+  position: relative;
+  color: var(--light-blue-text);
+  margin-left: 3.1rem;
+  text-align: left;
+}
+
+.profile-section div article h2::before {
+  content: "";
+  position: absolute;
+  top: -65%;
+  left: -21%;
+  width: 3.7rem;
+  height: 100%;
+  border-bottom: 3px solid var(--light-blue-text);
+}
+
+.profile-section div article p {
+  padding-bottom: 2rem;
+}
+
+.profile-section div article ul .doctor-info-heading {
+  color: var(--light-blue-text);
+  font-family: nexafont-bold;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  text-align: left;
+  border-top: 1px dashed var(--light-grey-txt);
+  border-bottom: 1px dashed var(--light-grey-txt);
+  font-size: 1.2rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: var(--white);
+}
+
+.profile-section div article ul .doctor-info-heading span i {
+  font-size: 1.2rem;
+  color: var(--light-blue-text);
+  padding-right: 1rem;
+}
+
+.profile-section div article ul .doctor-info-heading span .fa-stethoscope {
+  padding-right: 0.7rem;
+}
+
+.profile-section div article ul .doctor-info-heading span .fa-hospital {
+  padding-right: 0.7rem;
+}
+
+.profile-section div article ul .doctor-info-heading span .fa-star {
+  padding-right: 0.4rem;
+}
+
+.profile-section div article ul .doctor-info-heading span .fa-trophy {
+  padding-right: 0.7rem;
+}
+
+.profile-section div article ul .doctor-info-heading span .fa-map-marker-alt {
+  padding-right: 0.9rem;
+}
+
+.profile-section div article ul .doctor-info-heading span .fa-rupee-sign {
+  padding-right: 1.23rem;
+}
+
+.profile-section div article ul .doctor-info-para {
+  display: none;
+  background-color: var(--very-light-blue);
+  border: none;
+  overflow: hidden;
+}
+
+.profile-section div article ul .doctor-info-para p {
+  text-align: left;
+  padding: 0.3rem;
+}
+
+.profile-section div article ul .doctor-info-heading:after {
+  content: "\2B9F";
+  float: right;
+  font-size: 0.8rem;
+  background-color: var(--very-light-blue);
+  border-radius: 100%;
+  padding: 0.07rem 0.2rem;
+}
+
+.profile-section div article ul .active:after {
+  content: "\2B9D";
+  font-size: 0.8rem;
+}
+
+.need-help-section {
+  background-color: var(--light-blue);
+}
+
+.need-help-section h2 {
+  color: var(--white);
+}
+
+.need-help-section p {
+  padding-left: 0.2rem;
+}
+
+/*------------Ipad-View-----------*/
+@media (min-width: 767px) and (max-width: 1024px) {
+  .profile-section div {
+    padding: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 19rem 2fr;
+        grid-template-rows: 19rem 2fr;
+    grid-gap: 0.5rem;
+  }
+  .profile-section div figure {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .profile-section div figure button {
+    padding: 0.7rem 0;
+  }
+  .profile-section div article {
+    padding-top: 1rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  .profile-section div article h2 {
+    margin-left: 1.1rem;
+    text-align: left;
+  }
+  .profile-section div article h2::before {
+    left: -12%;
+    width: 2.7rem;
+  }
+  .profile-section div article p {
+    text-align: left;
+    line-height: 1.6rem;
+  }
+  .profile-section div article ul .doctor-info-heading {
+    padding: 1rem;
+  }
+  .need-help-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/*-----------Web-View--------------*/
+@media (min-width: 1025px) {
+  .contact-heading figure h2 {
+    left: 5%;
+  }
+  .contact-heading figure p {
+    left: 5%;
+  }
+  .profile-section div {
+    padding: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3.5fr 1fr;
+        grid-template-columns: 3.5fr 1fr;
+    -ms-grid-rows: 25rem 2fr;
+        grid-template-rows: 25rem 2fr;
+    grid-gap: 0.5rem;
+  }
+  .profile-section div figure {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .profile-section div article {
+    padding-top: 1rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  .profile-section div article h2 {
+    margin-left: 0rem;
+    text-align: left;
+  }
+  .profile-section div article h2::before {
+    left: -7%;
+    width: 4rem;
+    border-bottom: 4px solid var(--light-blue-text);
+  }
+  .profile-section div article p {
+    text-align: left;
+    line-height: 2rem;
+  }
+  .profile-section div article ul .doctor-info-heading {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .profile-section div article ul .doctor-info-heading:after {
+    font-size: 1rem;
+    padding: 0.08rem 0.3rem;
+  }
+  .profile-section div article ul .active:after {
+    font-size: 1rem;
+  }
+  .need-help-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .need-help-section p {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=doctor-profile.css.map */

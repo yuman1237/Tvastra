@@ -1,0 +1,181 @@
+.visible {
+  display: block !important;
+}
+.active {
+  background-color: var(--light-blue-text) !important;
+  .pageIndexLink {
+    color: white !important;
+  }
+}
+nav {
+  box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+  background-color: white;
+}
+.nav-buttns {
+  .secondary-bttn-dark {
+    visibility: hidden;
+  }
+}
+body {
+  background-color: var(--light-grey);
+}
+@media (min-width: 1025px) {
+  main {
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .dashboard {
+        width: 28%;
+
+        h3 {
+          text-align: left;
+          font-size: 1.8rem;
+          padding: 1rem 0;
+        }
+        ul {
+          li {
+            width: 95%;
+            margin-bottom: 0.2rem;
+            a {
+              display: inline-block;
+              border-radius: 0.3rem;
+              padding: 1rem;
+              width: 100%;
+              i {
+                color: var(--light-blue-text);
+
+                width: 2rem;
+              }
+              span {
+                font-size: 1.3rem;
+                color: var(--dark-blue);
+              }
+
+              &:hover {
+                background-color: var(--light-grey-txt);
+                border-left: 6px solid var(--light-blue-text);
+                span {
+                  color: var(--light-blue-text);
+                  font-family: nexafont-bold;
+                }
+              }
+            }
+            .links {
+              background-color: var(--light-grey);
+              border-left: 6px solid var(--light-blue-text);
+              span {
+                color: var(--light-blue-text);
+                font-family: nexafont-bold;
+              }
+            }
+          }
+        }
+      }
+      .medical_div {
+        width: 72%;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        .account {
+          border-bottom: 2px solid var(--light-grey);
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 1rem;
+          h2 {
+            width: 20rem;
+            font-size: 2.2rem;
+
+            padding: 0;
+          }
+          .secondary-bttn-light {
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+          }
+        }
+        .medical-container {
+          .container {
+            background-color: var(--light-grey);
+            margin-top: 1.5rem;
+            border-radius: 0.8rem;
+            justify-content: flex-start;
+            padding: 1rem;
+            .sub-container {
+              width: 80%;
+              justify-content: flex-start;
+              big {
+                width: 25%;
+                background-color: white;
+                font-family: nexafont-bold;
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 2rem;
+                cursor: pointer;
+              }
+              .medical-info {
+                width: 50%;
+
+                margin-left: 1rem;
+                justify-content: center;
+                align-items: center;
+                p {
+                  padding-bottom: 0.3rem;
+                  text-align: center;
+                  font-family: nexafont-bold;
+                  font-size: 1.3rem;
+                  color: var(--light-blue-text);
+                }
+                small {
+                  width: 60%;
+                  text-align: center;
+                  padding-bottom: 0.3rem;
+                  font-family: nexafont-bold;
+                  color: rgb(158, 158, 158);
+                }
+              }
+            }
+          }
+          .record-container {
+            margin-top: 1.5rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            padding: 1rem;
+            .sub-record {
+              background-color: var(--light-grey-txt);
+              flex-direction: column;
+              padding: 0.5rem;
+              border-radius: 0.5rem;
+              height: 12rem;
+              i {
+                color: rgb(172, 1, 1);
+                cursor: pointer;
+              }
+              p {
+                width: 90%;
+                padding-bottom: 0.3rem;
+                text-align: left;
+                font-family: nexafont-bold;
+                font-size: 1.3rem;
+                color: var(--light-blue-text);
+              }
+              figure {
+                height: 70%;
+              }
+            }
+          }
+          .secondary-bttn-light {
+            padding: 0.5rem 2rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,259 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(139, 139, 139);
+  --black: black;
+}
+/*----------Mobile-View--------*/
+
+.living-section {
+  padding: 0;
+  figure {
+    height: 24rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      background-color: var(--black);
+      opacity: 0.6;
+    }
+    h2 {
+      position: absolute;
+      color: var(--white);
+      z-index: 5;
+      top: 40%;
+    }
+    p {
+      position: absolute;
+      color: var(--white);
+      z-index: 5;
+      top: 50%;
+    }
+  }
+}
+.you-will-section {
+  .signature {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+}
+.your-well-section {
+  background-color: var(--black);
+  article {
+    h2 {
+      color: var(--white);
+    }
+    p {
+      color: var(--light-grey-txt);
+    }
+  }
+  ul {
+    padding: 2rem 0;
+    li {
+      padding: 1rem;
+      h3 {
+        color: var(--white);
+        padding-top: 1rem;
+      }
+      p {
+        color: var(--light-grey-txt);
+        font-size: 0.7rem;
+      }
+      border: 1px solid var(--light-grey-txt);
+      border-radius: 0.3rem;
+      margin-bottom: 1rem;
+    }
+  }
+  video {
+    display: none;
+  }
+}
+.need-help-section {
+  background-color: var(--light-blue);
+  h2 {
+    color: var(--white);
+  }
+  p {
+    padding-left: 0.2rem;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .living-section {
+    figure {
+      p {
+        padding: 0 1rem;
+      }
+    }
+  }
+  .you-will-section {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    grid-template-rows: 3fr 1fr;
+    article {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+    .doctor-img {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      height: 90%;
+    }
+    .signature {
+      width: 60%;
+      height: 60%;
+      margin-bottom: 0rem;
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+  .your-well-section {
+    article {
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+    .secondary-bttn-light {
+      margin: 2rem 0;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        padding: 0.3rem;
+        width: 32%;
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  .need-help-section {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1025px) {
+  .living-section {
+    figure {
+      img {
+        object-position: right top;
+      }
+      p {
+        padding-top: 1rem;
+      }
+      h2,
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .you-will-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    article {
+      grid-column: 1/2;
+      grid-row: 1/2;
+
+      h2 {
+        line-height: 2.8rem;
+      }
+      h2,
+      p {
+        text-align: left;
+      }
+    }
+    .doctor-img {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      height: 100%;
+      width: 50%;
+
+      margin-left: 10rem;
+    }
+    .signature {
+      width: 55%;
+      height: 80%;
+      margin-bottom: 0rem;
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+  .your-well-section {
+    background-color: var(--white);
+    position: relative;
+    padding: 0;
+
+    video {
+      display: inline-block;
+      position: relative;
+      object-fit: cover;
+      width: 100%;
+    }
+    article {
+      position: absolute;
+      z-index: 3;
+      top: 20%;
+      left: 3%;
+      h2 {
+        line-height: 2.5rem;
+      }
+      h2,
+      p {
+        text-align: left;
+        width: 50%;
+      }
+    }
+    .secondary-bttn-light {
+      top: 60%;
+      left: 3%;
+      position: absolute;
+      z-index: 3;
+      margin: 2rem 0;
+    }
+    ul {
+      width: 50%;
+      z-index: 3;
+      left: 45%;
+      position: absolute;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        padding: 4rem;
+        width: 32%;
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  .need-help-section {
+    flex-direction: row;
+    p {
+      padding: 0;
+    }
+  }
+}

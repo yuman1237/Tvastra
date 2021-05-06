@@ -1,0 +1,142 @@
+section {
+  padding-top: 2rem;
+  background-color: var(--light-grey);
+  align-items: center;
+  .clinic {
+    background-color: var(--white);
+    width: 40%;
+
+    padding: 1rem;
+
+    h3 {
+      color: var(--light-blue-text);
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--light-grey-txt);
+      font-size: 1.8rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 1rem;
+      li {
+        width: 50%;
+        padding: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        i {
+          padding-top: 0.2rem;
+          color: var(--light-blue-text);
+          width: 8%;
+        }
+        p {
+          width: 88%;
+          padding: 0;
+          display: inline-block;
+          font-size: 1rem;
+          padding-left: 1rem;
+          color: var(--dark-blue);
+        }
+        a {
+          text-decoration: none;
+          font-family: nexafont-bold;
+          color: var(--light-blue-text);
+        }
+      }
+    }
+    figure {
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 30%;
+        height: 7rem;
+      }
+      figcaption {
+        width: 65%;
+        height: 5rem;
+
+        h5 {
+          text-align: left;
+          span {
+            color: var(--light-blue-text);
+          }
+        }
+      }
+    }
+  }
+  form {
+    background-color: var(--white);
+    width: 45%;
+
+    box-shadow: var(--black) 3px 3px 10px;
+
+    h3 {
+      color: var(--light-blue-text);
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--light-grey-txt);
+      font-size: 1.8rem;
+    }
+    ul {
+      padding: 1.5rem;
+      h4 {
+        text-align: left;
+        font-size: 1.3rem;
+      }
+      li {
+        padding-bottom: 0.2rem;
+        label {
+          font-family: nexafont-bold;
+          color: var(--light-blue-text);
+        }
+        input {
+          width: 5%;
+        }
+      }
+    }
+    .details {
+      padding: 0rem 1.5rem;
+
+      h4 {
+        text-align: left;
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+      }
+
+      div {
+        padding-bottom: 0.5rem;
+        label {
+          font-family: nexafont-bold;
+          color: var(--light-blue-text);
+          font-size: 1.2rem;
+          padding-bottom: 0.4rem;
+        }
+        input {
+          padding: 1rem;
+          background-color: var(--light-grey);
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .secondary-bttn-dark {
+      margin-bottom: 1.5rem;
+      width: 92%;
+      letter-spacing: 0.3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      position: relative;
+      margin-top: 1rem;
+      i {
+        position: absolute;
+        color: var(--white);
+        left: 92%;
+        top: 35%;
+      }
+    }
+  }
+}

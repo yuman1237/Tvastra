@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/login.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+    <title>Login</title>
+</head>
+
+<body>
+    <nav>
+        <a href=""> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <form action="/not-valid" method="POST" class="nav-bar-bttn-a1">
+                <button type="submit" class="nav-bar-anchor-bttn">Doctor</button>
+            </form>
+            <form action="/not-valid" method="POST" class="nav-bar-bttn-a2">
+                <button type="submit" class="nav-bar-anchor-bttn ">Hospital</button>
+            </form>
+            <form action="/not-valid" method="POST" class="nav-bar-bttn-a3">
+                <button type="submit" class="nav-bar-anchor-bttn ">Treatment</button>
+            </form>
+
+            <form action="/not-valid" method="POST" class="nav-bar-bttn-a5">
+                <button type="submit" class="nav-bar-anchor-bttn ">About</button>
+            </form>
+
+
+        </div>
+        <div class="nav-buttns">
+
+
+            <button class="secondary-bttn-dark">Get a Qoute</button>
+
+        </div>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <main>
+        <section>
+            {{#if message2.length}}
+            <div class="alert-message">
+                <i class="fas fa-times-circle"></i>
+                <div class="msg-paras">
+                    <p class="message-para main-message">{{messagefail}}</p>
+                    <p class="message-para">{{message2}}</p>
+                </div>
+                <span id="closebttn" style="cursor: pointer;"
+                    onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+
+            {{/if}}
+            {{#if message7.length}}
+            <div class="alert-message green-color">
+                <i class="fas fa-check-circle"></i>
+                <div class="msg-paras">
+                    <p class="message-para main-message">{{message1}}</p>
+                    <p class="message-para">{{message7}}</p>
+                </div>
+                <span id="closebttn" style="cursor: pointer;"
+                    onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+
+            {{/if}}
+            {{#if message8.length}}
+            <div class="alert-message">
+                <i class="fas fa-times-circle"></i>
+                <div class="msg-paras">
+                    <p class="message-para main-message">{{messagefail}}</p>
+                    <p class="message-para">{{message8}}</p>
+                </div>
+                <span id="closebttn" style="cursor: pointer;"
+                    onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+
+            {{/if}}
+            <form action="/login" method="POST" id="form">
+                <h2>Email Login</h2>
+                <div class="login-input">
+                    <input type="email" placeholder="Enter email" name="email" required>
+                </div>
+                <div class="password-input">
+                    <input type="password" placeholder="Enter password" name="password" id="password">
+                    <i class="fas fa-eye" id="togglePassword"></i>
+
+                </div>
+                <div class="otp-div">
+                    <a href="phone-login">Login with OTP</a>
+
+                    <button id="forgotpassword">Forgot Password</button>
+                </div>
+                <button class="secondary-bttn-dark" type="submit">LOGIN <i class="fas fa-arrow-right"></i></button>
+                <p>Not registered? <a href="signup">Sign Up</a></p>
+
+
+
+            </form>
+
+            <h5>All Rights Reserved. © tvastra 2020 </h5>
+
+        </section>
+    </main>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        const forgotpassword = document.querySelector("#forgotpassword");
+        const form = document.querySelector("#form");
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+
+
+
+        forgotpassword.addEventListener('click', (e) => {
+            const action = "/reset-password"
+            form.setAttribute('action', action);
+        })
+
+        /*function passwordcheck() {
+             cosnt passwordval = document.querySelector("#password").value;
+             if (passwordval = "" || passwordval.length < 8) {
+                 document.querySelector("#password").oninvalid = "this.setCustomValidity('Please Enter valid Password')";
+                 return false;
+             }
+         } */
+    </script>
+    <script>
+        function hidemsg() {
+            document.querySelector(".alert-message").style.display = "none";
+        }
+        setTimeout("hidemsg()", 3000);
+    </script>
+
+</body>
+
+</html>

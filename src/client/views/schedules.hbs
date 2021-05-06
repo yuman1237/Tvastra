@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/schedules.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet@0.3.0/css/clocklet.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clocklet@0.3.0"></script>
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+
+    <title>Schedules</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="#" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+            </li>
+        </ul>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <main>
+        <section>
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a href="profile"><i class="fas fa-user-alt"></i> <span>Profile</span> </a>
+                    </li>
+                    <li><a href="appointments"><i class="fa fa-th-list"></i> <span>Appointments</span>
+                        </a></li>
+                    <li><a href="schedules" class="links"><i class="far fa-calendar-check"></i> <span>Schedules</span>
+                        </a></li>
+                    <li><a href="medicalreports"><i class="fa fa-file-alt"></i> <span>Medical Reports</span> </a></li>
+                    <li><a href="settings"><i class="fa fa-user-cog"></i> <span> Settings</span></a></li>
+
+                </ul>
+            </div>
+            <div class="schedules-div">
+
+                <div class="account">
+                    <h2>Schedules</h2>
+                    <button class="secondary-bttn-light" onclick="openModelBox();">Create Schedules</button>
+                </div>
+                <div class="schedule-container">
+                    {{#if user}}
+                    {{#each user as |bigvalue key1|}}
+                    <div class="schedule">
+                        <h3>{{day}}</h3>
+                        <div class="hospital-time">
+                            <h4>{{hospital}}</h4>
+                            <p>{{startTime}} - {{endTime}}</p>
+                        </div>
+                        <div class="slot-bttn">
+                            <button class="secondary-bttn-dark"
+                                onclick="return (confirm('Do you want to delete schedule?')? window.location.href='/deleteSchedule?id={{id}}' : '' )">Remove
+                                Schedule</button>
+                            <button class="secondary-bttn-dark" onclick="showSlots('{{_id}}')">View Slots</button>
+                        </div>
+                        <div class="checkbox-input"> <input type="checkbox" id="switch_ki"
+                                onchange="disableSchedule('{{_id}}',this.parentElement)" data-switch="{{switch}}">
+                        </div>
+                        <div class="time-slots-{{bigvalue._id}} time-slots" style="display:none;">
+                            {{#each timeslot_arr as |value key|}}
+                            <div class="one-slot ">
+                                <p>{{value.timing}}-{{value.timing}} </p>
+                                <input type="checkbox" onclick="disableSlot('{{bigvalue._id}}','{{value._id}}',this)"
+                                    id="time_ki" data-time="{{value.timeOn}}">
+
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <div class="model-box-background">
+        <form class="model-box" action="/createschedules" method="POST">
+            <div class="heading">
+                <h2>Create Schedule</h2>
+            </div>
+            <div>
+                <label>Select available days</label>
+                <select name="day" multiple="" required="">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                </select>
+                <label>Select the hospital</label>
+                <select name="hospital">
+                    <option value="bala">bala</option>
+
+                </select>
+                <div class="half-inputs">
+                    <div>
+                        <label>From (time)</label>
+                        <input type="text" name="startTime" placeholder="Starting time"
+                            data-clocklet="placement: top; z-index: 15; format: hh:mm A;" autocomplete="off"
+                            required="">
+                    </div>
+                    <div>
+                        <label>To (time)</label>
+                        <input type="text" name="endTime" placeholder="Ending time"
+                            data-clocklet="placement: top; z-index: 15; format: hh:mm A;" autocomplete="off"
+                            required="">
+                    </div>
+                </div>
+                <label>Intervals</label>
+                <input type="number" name="interval" placeholder="Enter intervals in minutes" min="15" max="60"
+                    step="15" required="">
+            </div>
+            <div class="button-group">
+                <button type="button" class="danger" onclick="closeModelBox()">Cancel</button>
+                <button id="createScheduleSubmitBtn" class="success" type="submit">Create Schedule</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const ModelBoxBg = document.getElementsByClassName("model-box-background")[0];
+        const ModelBox = document.getElementsByClassName("model-box")[0];
+
+        function closeModelBox() {
+            ModelBox.style.animation = "none)";
+            ModelBox.style.transform = "scale(0)";
+            setTimeout(() => {
+                ModelBoxBg.style.display = "none";
+            }, 100);
+        }
+        function openModelBox(param) {
+            ModelBoxBg.style.display = "flex";
+            ModelBox.style.transform = "scale(1)";
+            modelBoxParam = param; // global variable for further use
+        };
+
+        const schedule = document.querySelector('schedule');
+        async function disableSchedule(id, elem) {
+
+            var result = await fetch(`/disableSchedule?id=${id}`);
+            await result.text().then((txt) => {
+
+                const txt1 = JSON.parse(txt);
+                console.log(txt1);
+                if (result.ok) {
+
+                    if (txt1.switch == "on") {
+                        elem.parentElement.classList.add("disabled");
+
+                    } else {
+                        elem.parentElement.classList.remove("disabled");
+                    }
+                }
+            })
+
+        }
+
+        async function disableSlot(scheduleId, slotId, elem) {
+            console.log(slotId);
+            console.log(scheduleId);
+
+            var result = await fetch(`/disableSlot?scheduleId=${scheduleId}&slotId=${slotId}`);
+
+            await result.text().then((txt) => {
+                console.log(txt);
+
+                if (result.ok) {
+                    if (txt == "on") {
+                        elem.parentElement.classList.add("disabled");
+
+                    } else {
+                        elem.parentElement.classList.remove("disabled");
+                    }
+                }
+            })
+        }
+
+        window.onload = onPageLoad();
+
+        function onPageLoad() {
+            let switchOn = document.querySelectorAll("#switch_ki");
+            let timeOn = document.querySelectorAll("#time_ki");
+            switchOn.forEach((e) => {
+                let vl = e.getAttribute("data-switch");
+
+                if (vl.toString() == 'on') {
+                    e.checked = 'true';
+                    e.parentElement.parentElement.classList.add('disabled');
+                }
+            })
+            timeOn.forEach((e) => {
+                let val1 = e.getAttribute("data-time");
+
+                if (val1.toString() == 'on') {
+                    e.checked = "true";
+                    e.parentElement.classList.add("disabled");
+                }
+
+            })
+
+        }
+
+        function showSlots(id) {
+            document.querySelector(`.time-slots-${id}`).style.display == 'none' ? document.querySelector(`.time-slots-${id}`).style.display = 'grid' : document.querySelector(`.time-slots-${id}`).style.display = 'none';
+        }
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script>
+
+        const startTimeInput = document.querySelector("[name='startTime']");
+        const endTimeInput = document.querySelector("[name='endTime']");
+        const submitBtn = document.getElementById("createScheduleSubmitBtn");
+        const timeInputs = document.querySelector(".half-inputs");
+
+        [startTimeInput, endTimeInput].forEach(elem => {
+
+            elem.addEventListener("clocklet.closed", e => {
+                var message = document.createElement("small");
+                if (moment(startTimeInput.value, "hh:mm A").isAfter(moment(endTimeInput.value, "hh:mm A")) || startTimeInput.value == endTimeInput.value) {
+                    if (!submitBtn.disabled) {
+                        submitBtn.disabled = true;
+                        message.innerText = "Start time must be before endtime";
+                        timeInputs.append(message);
+                    }
+                } else if (moment(startTimeInput.value, "hh:mm A").isBefore(moment("10:00 AM", "hh:mm A")) || moment(startTimeInput.value, "hh:mm A").isAfter(moment("10:00 PM", "hh:mm A")) || moment(endTimeInput.value, "hh:mm A").isAfter(moment("10:00 PM", "hh:mm A")) || moment(endTimeInput.value, "hh:mm A").isBefore(moment("10:00 AM", "hh:mm A"))) {
+                    if (!submitBtn.disabled) {
+                        submitBtn.disabled = true;
+                        message.innerText = "Time must be between 10:00 AM to 10:00 PM";
+                        timeInputs.append(message);
+                    }
+                } else {
+                    submitBtn.disabled = false;
+                    var errText = timeInputs.querySelector("small");
+                    if (errText) {
+                        errText.remove()
+                    }
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

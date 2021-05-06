@@ -1,0 +1,119 @@
+.visible {
+  display: block !important;
+}
+.active {
+  background-color: var(--light-blue-text) !important;
+  .pageIndexLink {
+    color: white !important;
+  }
+}
+nav {
+  box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+}
+.nav-buttns {
+  .secondary-bttn-dark {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .dashboard {
+        width: 28%;
+
+        h3 {
+          text-align: left;
+          font-size: 1.8rem;
+          padding: 1rem 0;
+        }
+        ul {
+          li {
+            width: 95%;
+            margin-bottom: 0.2rem;
+            a {
+              display: inline-block;
+              border-radius: 0.3rem;
+              padding: 1rem;
+              width: 100%;
+              i {
+                color: var(--light-blue-text);
+
+                width: 2rem;
+              }
+              span {
+                font-size: 1.3rem;
+                color: var(--dark-blue);
+              }
+
+              &:hover {
+                background-color: var(--light-grey);
+                border-left: 6px solid var(--light-blue-text);
+                span {
+                  color: var(--light-blue-text);
+                  font-family: nexafont-bold;
+                }
+              }
+            }
+            .links {
+              background-color: var(--light-grey);
+              border-left: 6px solid var(--light-blue-text);
+              span {
+                color: var(--light-blue-text);
+                font-family: nexafont-bold;
+              }
+            }
+          }
+        }
+      }
+      .hospital_survey {
+        width: 72%;
+        h2 {
+          padding-bottom: 2rem;
+        }
+        .users {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          grid-gap: 1.2rem;
+          figure {
+            border: 2px solid var(--light-grey-txt);
+            figcaption {
+              h4 {
+                text-align: left;
+                padding: 0.5rem 1.8rem;
+                color: var(--light-blue-text);
+                position: relative;
+                &::before {
+                  content: "";
+                  left: 0%;
+                  top: 52%;
+                  width: 1.5rem;
+                  position: absolute;
+                  border-bottom: 3px solid var(--light-blue-text);
+                }
+              }
+              ul {
+                li {
+                  padding: 0.5rem 1.8rem;
+                  i {
+                    color: var(--light-blue-text);
+
+                    width: 13%;
+                  }
+                  span {
+                    color: var(--dark-blue);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

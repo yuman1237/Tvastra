@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/dentistry.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#card-slider', {
+                perPage: 1,
+
+                breakpoints: {
+                    800: {
+                        perPage: 1,
+                    }
+                }
+            }).mount();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('#card-slider1', {
+                perPage: 1,
+
+                breakpoints: {
+                    800: {
+                        perPage: 1,
+                    }
+                }
+            }).mount();
+        });
+    </script>
+    <title>Dentistry</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry" class="link">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section class="dentistry-heading">
+            <figure>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist_hero_image.jpg"
+                    alt="">
+                <h2>Dentistry</h2>
+                <p>Home / Dentistry</p>
+
+            </figure>
+        </section>
+        <section class="vaccination-section">
+            <figure>
+                <h2>Vaccination</h2>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist.jpg" alt="">
+                <figcaption>
+                    <h3>About Dentist Department</h3>
+                    <p>
+                        The vaccination of dentist against various vaccine-preventable infections is the most important
+                        measure of primary prevention against
+                        such diseases which would otherwise prove fatal for both the dentists and their patients.
+                    <ul>
+                        <li>CF-related diabetes(monthly)</li>
+                        <li>Gastrointestinal(monthly)</li>
+                        <li>CF-related liver disease (monthly)</li>
+                        <li>Sweat testing (three times per month)</li>
+                    </ul>
+                    </p>
+                </figcaption>
+            </figure>
+            <div class="icons-para">
+                <figure>
+                    <i class="fas fa-stethoscope"></i>
+                    <figcaption>
+                        <h4>Central Nervous System</h4>
+                        <p>Open visition with only two visitors in a room at any time. No on eunder 12 years of age may.
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <i class="fas fa-tablets"></i>
+                    <figcaption>
+                        <h4>Central Nervous System</h4>
+                        <p>Open visition with only two visitors in a room at any time. No on eunder 12 years of age may.
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <i class="fas fa-heartbeat"></i>
+                    <figcaption>
+                        <h4>Central Nervous System</h4>
+                        <p>Open visition with only two visitors in a room at any time. No on eunder 12 years of age may.
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h4>Service Details</h4>
+                    <ul>
+                        <li> Price <span>from $340</span></li>
+                        <li> Duration <span>10 minutes</span></li>
+                        <li> Office <span>#46</span></li>
+                        <li> Doctor <span>Dr. Elizabeth Beard</span></li>
+                        <li>Categories<span>Family Medicine</span></li>
+
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h4>Schedule</h4>
+                    <ul>
+                        <li>Tuesday <span>10:00am-1:00pm</span></li>
+                        <li>Friday <span>7:00am-10:00pm</span></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="more-services-section">
+
+            <h2>More Services</h2>
+
+
+            <div class="treatment-card splide" id="card-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+
+                        <li class="splide__slide">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Othopedic Surgery</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cancer</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cardiology</h4>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Othopedic Surgery</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cancer</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cardiology</h4>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="treatment-card1 splide" id="card-slider1">
+                <div class="splide__track">
+                    <ul class="splide__list">
+
+                        <li class="splide__slide">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Othopedic Surgery</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cancer</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cardiology</h4>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Othopedic Surgery</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cancer</h4>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg"
+                                    alt="">
+                                <figcaption>
+                                    <h4>Cardiology</h4>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <a href="." class="footer-img"><img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt=""></a>
+        <div class="footer-links">
+            <a href="doctor">Doctor</a>
+            <a href="hospital">Hospital</a>
+            <a href="">Treatment</a>
+            <a href="contactus">Contact Us</a>
+            <a href="">FAQs</a>
+        </div>
+        <div class="social-media-links">
+            <a href=""> <i class="fab fa-facebook-f"></i></a>
+
+            <a href=""> <i class="fab fa-pinterest-p"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+        <h5>All Rights Reserved. © tvastra 2018 </h5>
+    </footer>
+</body>
+
+</html>

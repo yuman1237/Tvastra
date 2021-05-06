@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="/sass/doctor.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>doctors</title>
+
+</head>
+
+<body>
+   <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="/doctor?page=1&size=3" class="link">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+          
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+         <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                   <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section class="doctor-heading">
+
+            <figure>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png" alt="">
+                <h2>Cardiac Surgeon in <span>Delhi</span></h2>
+            </figure>
+        </section>
+        <section class="sort-by-section">
+            <p>Home / Doctor List</p>
+
+
+            <select id="doctors" placeholder="Sort by">
+
+                <option value="doctor-1">Sort by</option>
+                <option value="doctor-2">Name</option>
+                <option value="doctor-3">Specility</option>
+                <option value="doctor-4">Age</option>
+            </select>
+
+        </section>
+        <section class="doctors-section">
+
+            <div class="filter-by">
+
+                <h4>Filter By</h4>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+            </div>
+            <div class="doctor-cards" data-page="{{page}}">
+               
+
+                {{#each doctorinfo as |value key|}}
+                <div class="doctor-card">
+                    <div class="doc">
+                        <div class="doctor-info-bttn">
+                            <h3>{{value.doctorname}}</h3>
+                            <ul>
+                                <li> <span><i class="fas fa-certificate"></i></span>{{value.describe}}</li>
+
+
+                                <li id="achieve"> <span><i class="fas fa-award "></i></span>{{value.achievement}}
+                                </li>
+
+                                <li> <span><i class="far fa-clock"></i></span> {{value.experience}} years of experience</li>
+                                <li> <span><i class="far fa-hospital"></i></span> {{value.hospitals}}</li>
+                                <li> <span><i class="fas fa-map-marker-alt"></i></span> {{value.spcialization}}</li>
+                                <li> <span><i class="fas fa-money-bill-alt"></i></span>{{value.avgfees}} rupees</li>
+                            </ul>
+                            <button class="secondary-bttn-dark " onclick="selectslots('{{value.doctorname}}','{{key}}')">Book an
+                                Appointment</button>
+                        </div>
+                        <figure>
+                            <img src="./uploads/{{value.myfile}}" alt="">
+                        </figure>
+                    </div>
+                    <div class="main-carousel{{key}}" id="main-carousel" style="display: none;">
+
+
+                    </div>
+                    <div class="time_show{{key}}" id="time_show" style="display: none;">
+
+                    </div>
+                </div>
+
+                {{/each}}
+
+            </div>
+       
+                    <div class="pagenationContainer">
+                        <ul>
+
+                            <li>
+                                <a class="pageIndexLink" href="/doctor?page=1&size=3">1</a>
+                            </li>
+
+                            <li>
+                                <a class="pageIndexLink" href="/doctor?page=2&size=3">2</a>
+                            </li>
+
+                            <li >
+                                <a class="pageIndexLink" href="/doctor?page=3&size=3">3</a>
+                            </li>
+
+                            <li id="pagenationTo_4">
+                                <a class="pageIndexLink"href="/doctor?page=4&size=3">4</a>
+                            </li>
+
+                            <li id="pagenationTo_5">
+                                <a class="pageIndexLink">5</a>
+                            </li>
+
+                            <li id="pagenationTo_6">
+                                <a class="pageIndexLink">6</a>
+                            </li>
+
+                            <li id="pagenationTo_7">
+                                <a class="pageIndexLink">7</a>
+                            </li>
+
+                        </ul>
+                    </div>
+        </section>
+
+
+        <section class="need-help-section">
+            <article>
+                <h2>Need Help?</h2>
+                <p>Just let us know, we will happy to assist you</p>
+            </article>
+            <button class="secondary-bttn-light sub-section">Submit your enquiry</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="." class="footer-img"><img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt=""></a>
+        <div class="footer-links">
+            <a href="doctor">Doctor</a>
+            <a href="hospital">Hospital</a>
+            <a href="">Treatment</a>
+            <a href="contactus">Contact Us</a>
+            <a href="faq">FAQs</a>
+        </div>
+        <div class="social-media-links">
+            <a href=""> <i class="fab fa-facebook-f"></i></a>
+
+            <a href=""> <i class="fab fa-pinterest-p"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+        <h5>All Rights Reserved. © tvastra 2018 </h5>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
+<script>
+    let pages = document.querySelector(".doctor-cards").getAttribute("data-page");
+      let index= document.querySelectorAll(".pageIndexLink");
+
+            index.forEach((e)=>{
+                 if(e.innerText == pages)
+                 {
+                    e.parentElement.classList.add("page-active");
+                 }
+            })
+
+
+    let aryDates = [];
+
+
+    function GetDates(startDate, daysToAdd) {
+
+        for (var i = 0; i <= daysToAdd; i++) {
+            let str1 = {
+                _id: '',
+                date: '',
+                time: ''
+            }
+            var currentDate = new Date();
+            currentDate.setDate(startDate.getDate() + i);
+            str1.date = DayAsString(currentDate.getDay()) + ", " + currentDate.getDate() + " " + MonthAsString(currentDate.getMonth()) + " " + currentDate.getFullYear();
+            aryDates.push(str1);
+        }
+
+        return aryDates;
+    }
+
+    function MonthAsString(monthIndex) {
+        var d = new Date();
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+
+        return month[monthIndex];
+    }
+
+    function DayAsString(dayIndex) {
+        var weekdays = new Array(7);
+        weekdays[0] = "Sunday";
+        weekdays[1] = "Monday";
+        weekdays[2] = "Tuesday";
+        weekdays[3] = "Wednesday";
+        weekdays[4] = "Thursday";
+        weekdays[5] = "Friday";
+        weekdays[6] = "Saturday";
+
+        return weekdays[dayIndex];
+    }
+
+    var startDate = new Date();
+    var ary = GetDates(startDate, 6);
+
+
+
+
+   
+
+    let slot = document.querySelector('.slot_time');
+
+    
+
+
+    async function selectslots(doctorname,key) {
+       var elem = document.querySelector(`.main-carousel${key}`);
+        elem.style.display == 'none' ? elem.style.display = 'flex' : elem.style.display = 'none';
+
+
+        elem.innerHTML = "";
+
+
+
+        if (elem.style.display == 'flex') {
+            let result = await fetch(`/fetchtimeslots?doctorname=${doctorname}`);
+            result.text().then((user) => {
+                let user1 = JSON.parse(user);
+
+
+                if (user1.length == 0) {
+                    let day_time = document.createElement('div');
+
+
+                    day_time.classList.add('no-slot-available');
+
+                    let struct = `
+                          <div class="no_slot" >
+                        
+                         <small>No slots available</small>
+                         </div>
+                   `
+                    day_time.innerHTML = struct;
+                    elem.append(day_time);
+                }
+                else {
+
+
+                    user1.forEach((u) => {
+                        aryDates.forEach((e) => {
+                            if (e.date.includes(u.day)) {
+                                e._id = u._id;
+                                e.time = u.timeslot_arr.filter((e) => { return e.timeOn == "off" });
+                            }
+                        })
+
+                    })
+                    aryDates.forEach((val) => {
+                        if (val.date.includes('Sunday')) {
+                            var index = aryDates.indexOf(val);
+                            aryDates.splice(index, 1);
+                        }
+                    })
+                    var flkty = new Flickity(elem, {
+                        // options
+                        cellAlign: 'left',
+                        contain: true
+                    });
+
+                    aryDates.forEach((e) => {
+                        let day_time = document.createElement('div');
+
+
+                        day_time.classList.add('carousel-cell');
+
+                        let struct = `
+                          <div class="time_slot_day" onclick="gettingTime('${e.date}','${doctorname}',this,'${key}')">
+                         <big>${e.date}</big>
+                         <small>${e.time.length} slots available</small>
+                         </div>
+                   `
+                        day_time.innerHTML = struct;
+                        flkty.append(day_time);
+                    })
+
+                }
+
+            })
+        }
+
+
+    }
+    let i = 0;
+        
+    function gettingTime(date, doctorname,element,key) {
+ let time_show = document.querySelector(`.time_show${key}`);
+     time_show.style.display == 'none' ? time_show.style.display = 'flex' : "";
+       
+
+        time_show.innerHTML = "";
+
+         let time_slot_day = document.querySelectorAll(".time_slot_day");
+
+         time_slot_day.forEach((e)=>{
+             e.classList.remove('timeslot_active_hai');
+         })
+
+    
+
+        aryDates.forEach((e) => {
+
+            if (e.date == date) {
+                element.classList.add('timeslot_active_hai');
+                if (e.time) {
+                    let morning = document.createElement('div');
+                    morning.classList.add("morning")
+                    let evening = document.createElement('div');
+                    evening.classList.add("evening")
+                    let afternoon = document.createElement('div');
+                    afternoon.classList.add("afternoon");
+                    let tim_mor = document.createElement('div');
+                    tim_mor.classList.add("tim");
+                    morning.appendChild(tim_mor);
+                    let tim_eve = document.createElement('div');
+                    tim_eve.classList.add("tim");
+                    evening.appendChild(tim_eve);
+                    let tim_aft = document.createElement('div');
+                    tim_aft.classList.add("tim");
+                    afternoon.appendChild(tim_aft);
+                    const mor = `<p>Morining</p>`;
+                    const mor1 = document.createElement('div');
+                    mor1.classList.add("mor");
+                    mor1.innerHTML = mor;
+                    morning.prepend(mor1);
+                    const mor2 = `<p>Evening</p>`;
+                    const mor3 = document.createElement('div');
+                    mor3.classList.add("mor");
+                    mor3.innerHTML = mor2;
+                    evening.prepend(mor3);
+                    const mor4 = `<p>Afternoon</p>`;
+                    const mor5 = document.createElement('div');
+                    mor5.classList.add("mor");
+                    mor5.innerHTML = mor4;
+                    afternoon.prepend(mor5);
+
+                    e.time.forEach((u) => {
+
+                        if (moment(u.timing, "hh:mm A").isBefore(moment("12:00 PM", "hh:mm A"))) {
+                            let timings = document.createElement('p');
+                            timings.classList.add('timinig');
+
+                            let str = `<div onclick="window.location.href='/booking?dayslot=${e._id}&timeslot=${u._id}&time=${u.timing}&date=${e.date}&doctorname=${doctorname}'">
+                                    <p>${u.timing}</p>
+                                       </div> `
+
+                            timings.innerHTML = str;
+                            tim_mor.appendChild(timings);
+
+                        }
+                        if (moment(u.timing, "hh:mm A").isSameOrAfter(moment("12:00 PM", "hh:mm A")) && moment(u.timing, "hh:mm A").isBefore(moment("4:00 PM", "hh:mm A"))) {
+                            let timings = document.createElement('p');
+                            timings.classList.add('timinig');
+                            let str = `<div onclick="window.location.href='/booking?dayslot=${e._id}&timeslot=${u._id}&time=${u.timing}&date=${e.date}&doctorname=${doctorname}'">
+                                    <p>${u.timing}</p>
+                                       </div> `
+
+                            timings.innerHTML = str;
+
+
+                            tim_eve.appendChild(timings);
+
+                        }
+                        if (moment(u.timing, "hh:mm A").isSameOrAfter(moment("4:00 PM", "hh:mm A"))) {
+                            let timings = document.createElement('p');
+                            timings.classList.add('timinig');
+
+                            let str = `<div onclick="window.location.href='/booking?dayslot=${e._id}&timeslot=${u._id}&time=${u.timing}&date=${e.date}&doctorname=${doctorname}'">
+                                    <p>${u.timing}</p>
+                                       </div> `
+
+                            timings.innerHTML = str;
+
+                            tim_aft.appendChild(timings);
+                        }
+
+                        time_show.appendChild(morning);
+                        time_show.appendChild(evening);
+                        time_show.appendChild(afternoon);
+
+
+
+                    })
+
+
+                }
+                else {
+
+                    let timings = document.createElement('div');
+                    timings.classList.add('timinig-not-avaliable');
+
+                    let str = `<div>
+                                    <p>No Slots Available</p>
+                                  
+                                    <button class="secondary-bttn-light" onclick="getNextSlot(${date})">Go to Next slot</button>
+                                       </div> `
+
+                    timings.innerHTML = str;
+
+                    time_show.appendChild(timings);
+                }
+            }
+
+        })
+    }
+/*   function getNextSlot(date) {
+            aryDates.forEach((e) => {
+                if (e.date == date) {
+                    for (let i = e; i < aryDates.length; i++) {
+                        if (i.time.length >0)
+                        {
+    
+                        }
+                    }
+                }
+            })
+    
+    
+        }*/
+
+
+</script>
+
+
+</html>

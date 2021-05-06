@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/medicalreports.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css">
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>Medical Reports</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section>
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a href="profile"><i class="fas fa-user-alt"></i> <span>Profile</span> </a>
+                    </li>
+                    <li><a href="appointments"><i class="fa fa-th-list"></i> <span>Appointments</span>
+                        </a></li>
+                    {{#if doctor}}
+                    <li><a href="schedules"><i class="far fa-calendar-check"></i> <span>Schedules</span>
+                        </a></li>
+                    {{/if}}
+                    <li><a href="medicalreports" class="links"><i class="fa fa-file-alt"></i> <span>Medical
+                                Reports</span> </a></li>
+                    <li><a href="settings"><i class="fa fa-user-cog"></i> <span> Settings</span></a></li>
+
+                </ul>
+            </div>
+            <div class="medical_div">
+                <div class="account">
+                    <h2>Medical Reports</h2>
+                    {{#if doctor}}
+
+                    <button class="secondary-bttn-light" onclick="openModelBox();">Add Record</button>
+                    {{/if}}
+                </div>
+                <div class="medical-container">
+                    {{#each rec}}
+                    <div class="container">
+                        <div class="sub-container">
+                            <big onclick="window.location.href='/showRecord?id={{_id}}'">{{date}}</big>
+
+                            <div class="medical-info">
+                                <p>{{title}}</p>
+                                <small>{{name}}</small>
+                                <small>{{reportType}}</small>
+                            </div>
+                        </div>
+                        {{#if doctor}}
+                        <button class="secondary-bttn-light"
+                            onclick="window.location.href='/deleteRecord?id={{_id}}'">Delete</button>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="model-box-background">
+        <form class="model-box" action="/addRecord" method="POST" enctype="multipart/form-data"
+            style="transform: scale(1);">
+            <div class="photos">
+                <div class="selected-photos">
+                </div>
+
+
+                <div class="add-photo">
+                    <input type="file" name="myfile" id="myfile" accept="image/*" onchange="loadFile(event)"
+                        required="">
+                    <label for="myfile"><i class="fa fa-plus"></i><span>Add Photo</span></label>
+                </div>
+            </div>
+            <div>
+                <input type="text" name="doctorname" value='{{fullname}}' style="display: none;">
+                <input type="text" name="title" placeholder="Title" required="">
+                <input type="text" name="name" value="{{fullname}}" required="">
+                <input type="date" name="date" max=Date.now() required="">
+            </div>
+            <div class="reportType">
+                <h6>Type of Report</h6>
+                <div>
+
+                    <input type="radio" name="reportType" id="report" value="Report">
+                    <label for="report"><i class="far fa-file-alt"></i><span>Report</span></label>
+                    <input type="radio" name="reportType" id="prescription" value="Prescription">
+                    <label for="prescription"><i class="far fa-file-alt"></i><span>Prescription</span></label>
+                    <input type="radio" name="reportType" id="invoice" value="Invoice">
+                    <label for="invoice"><i class="far fa-file-alt"></i><span>Invoice</span></label>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" class="danger" onclick="closeModelBox()">Cancel</button>
+                <button type="submit" class="success">Done</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    const ModelBoxBg = document.getElementsByClassName("model-box-background")[0];
+    const ModelBox = document.getElementsByClassName("model-box")[0];
+
+    function closeModelBox() {
+        ModelBox.style.animation = "none)";
+        ModelBox.style.transform = "scale(0)";
+        setTimeout(() => {
+            ModelBoxBg.style.display = "none";
+        }, 100);
+    }
+    function openModelBox(param) {
+        ModelBoxBg.style.display = "flex";
+        ModelBox.style.transform = "scale(1)";
+        modelBoxParam = param; // global variable for further use
+    };
+    // var loadFile = function (event) {
+    //   var image = document.getElementsById('selected-photos');
+    //   image.src = URL.createObjectURL(event.target.files[0]);
+    // };
+    (function () {
+        const reportPicInput = document.getElementById("myfile");
+        var selectedPhotoContainer = document.querySelector(".selected-photos");
+
+        reportPicInput.addEventListener("change", e => {
+            if (reportPicInput.files.length > 5) {
+                alert("Maximum 5 files are allowed");
+                reportPicInput.value = null;
+                selectedPhotoContainer.innerHTML = '';
+            } else
+                if (reportPicInput.files.length) {
+                    selectedPhotoContainer.innerHTML = '';
+                    for (i = 0; i < reportPicInput.files.length; i++) {
+                        var imgElem = document.createElement("img");
+                        imgElem.src = URL.createObjectURL(reportPicInput.files[i]);
+                        selectedPhotoContainer.appendChild(imgElem);
+                        imgElem.onload = function () {
+                            URL.revokeObjectURL(this.src);
+                        }
+                    }
+                }
+        })
+    })();
+
+</script>
+
+</html>

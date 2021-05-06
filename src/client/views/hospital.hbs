@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/hospital.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <title>Hospitals</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="doctor">Doctor</a>
+
+            <a href="hospital" class="link">Hospital</a>
+
+            <a href="dentistry">Treatment</a>
+
+
+
+            <a href="aboutus">About</a>
+
+        </div>
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark"> <a href="sumit"> Get a Qoute</a></button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">{{name}}</button>
+
+
+                <div class="dropdown-content">
+                    <a href="profile" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/{{myfile}}" alt="">
+                            </figure>
+                            <span> <big> {{fullname}}</big>
+                                <small> {{pnumber}}</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section class="doctor-heading">
+
+            <figure>
+                <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Doctors.png" alt="">
+                <h2>Hospitals in <span>Delhi</span></h2>
+            </figure>
+        </section>
+        <section class="sort-by-section">
+            <p>Home / Hospital List</p>
+
+
+            <select id="doctors">
+
+                <option value="doctor-1">Sort by</option>
+                <option value="doctor-2">Name</option>
+                <option value="doctor-3">Specility</option>
+                <option value="doctor-4">Age</option>
+            </select>
+
+        </section>
+        <section class="doctors-section">
+
+            <div class="filter-by">
+
+                <h4>Filter By</h4>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+                <div class="filter-sub-section">
+                    <h4>Location <span><i class="fas fa-search"></i></span> </h4>
+                    <ul class="filter-sub-sections">
+                        <li> <input type="checkbox" name=" DLF Cyber City">
+                            <label> DLF Cyber City</label>
+                        </li>
+                        <li> <input type="checkbox" name="Dwaraka">
+                            <label> Dwaraka</label>
+                        </li>
+                        <li> <input type="checkbox" name="Lajpat Nagar">
+                            <label> Lajpat Nagar</label>
+                        </li>
+                        <li> <input type="checkbox" name="Palam Vihar">
+                            <label> Palam Vihar</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="Punjabi Baag">
+                            <label> Punjabi Baag</label>
+                        </li>
+                        <li> <input type="checkbox" name="Pusa Road">
+                            <label> Pusa Road</label>
+                        </li>
+
+
+                    </ul>
+                    <button>+ Show More</button>
+
+                </div>
+            </div>
+            <div class="doctor-cards">
+                <div class="doctor-card">
+                    <div class="doctor-info-bttn">
+                        <h3>Apollo Hospital</h3>
+
+                        <ul>
+                            <li> <span><i class="fas fa-map-marker-alt"></i></span> Delhi Mathura Road 110076</li>
+                            <li> <span><i class="fas fa-procedures"></i></span> 100 beds</li>
+                            <li> <span><i class="fas fa-stethoscope"></i></span> Famous Treatments </li>
+
+
+
+                        </ul>
+                        <div class="famous-treatment">
+                            <button>Multi Organ Transplant</button>
+                            <button>Orthopedic Surgery</button>
+                            <button>Infertility Treatment</button>
+                            <button>Dentistry</button>
+                            <button>Cardiology</button>
+                            <button>Cancer</button>
+                            <button>+40 more</button>
+
+                        </div>
+                        <button class="secondary-bttn-dark ">Call Now</button>
+                    </div>
+                    <figure>
+                        <a href="hospital-profile"> <img
+                                src="https://static.lyfboat.com/lyfboat/uploads/hospital_images/1+-+Indraprastha+Apollo/Slider/indraprastha_apollo.jpg"
+                                alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-info-bttn">
+                        <h3>Apollo Hospital</h3>
+
+                        <ul>
+                            <li> <span><i class="fas fa-map-marker-alt"></i></span> Delhi Mathura Road 110076</li>
+                            <li> <span><i class="fas fa-procedures"></i></span> 100 beds</li>
+                            <li> <span><i class="fas fa-stethoscope"></i></span> Famous Treatments </li>
+
+
+
+                        </ul>
+                        <div class="famous-treatment">
+                            <button>Multi Organ Transplant</button>
+                            <button>Orthopedic Surgery</button>
+                            <button>Infertility Treatment</button>
+                            <button>Dentistry</button>
+                            <button>Cardiology</button>
+                            <button>Cancer</button>
+                            <button>+40 more</button>
+
+                        </div>
+                        <button class="secondary-bttn-dark ">Call Now</button>
+                    </div>
+                    <figure>
+                        <a href="hospital-profile"> <img
+                                src="https://static.lyfboat.com/lyfboat/uploads/hospital_images/1+-+Indraprastha+Apollo/Slider/indraprastha_apollo.jpg"
+                                alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-info-bttn">
+                        <h3>Apollo Hospital</h3>
+
+                        <ul>
+                            <li> <span><i class="fas fa-map-marker-alt"></i></span> Delhi Mathura Road 110076</li>
+                            <li> <span><i class="fas fa-procedures"></i></span> 100 beds</li>
+                            <li> <span><i class="fas fa-stethoscope"></i></span> Famous Treatments </li>
+
+
+
+                        </ul>
+                        <div class="famous-treatment">
+                            <button>Multi Organ Transplant</button>
+                            <button>Orthopedic Surgery</button>
+                            <button>Infertility Treatment</button>
+                            <button>Dentistry</button>
+                            <button>Cardiology</button>
+                            <button>Cancer</button>
+                            <button>+40 more</button>
+
+                        </div>
+                        <button class="secondary-bttn-dark ">Call Now</button>
+                    </div>
+                    <figure>
+                        <a href="hospital-profile"> <img
+                                src="https://static.lyfboat.com/lyfboat/uploads/hospital_images/1+-+Indraprastha+Apollo/Slider/indraprastha_apollo.jpg"
+                                alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-info-bttn">
+                        <h3>Apollo Hospital</h3>
+
+                        <ul>
+                            <li> <span><i class="fas fa-map-marker-alt"></i></span> Delhi Mathura Road 110076</li>
+                            <li> <span><i class="fas fa-procedures"></i></span> 100 beds</li>
+                            <li> <span><i class="fas fa-stethoscope"></i></span> Famous Treatments </li>
+
+
+
+                        </ul>
+                        <div class="famous-treatment">
+                            <button>Multi Organ Transplant</button>
+                            <button>Orthopedic Surgery</button>
+                            <button>Infertility Treatment</button>
+                            <button>Dentistry</button>
+                            <button>Cardiology</button>
+                            <button>Cancer</button>
+                            <button>+40 more</button>
+
+                        </div>
+                        <button class="secondary-bttn-dark ">Call Now</button>
+                    </div>
+                    <figure>
+                        <a href="hospital-profile"> <img
+                                src="https://static.lyfboat.com/lyfboat/uploads/hospital_images/1+-+Indraprastha+Apollo/Slider/indraprastha_apollo.jpg"
+                                alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-info-bttn">
+                        <h3>Apollo Hospital</h3>
+
+                        <ul>
+                            <li> <span><i class="fas fa-map-marker-alt"></i></span> Delhi Mathura Road 110076</li>
+                            <li> <span><i class="fas fa-procedures"></i></span> 100 beds</li>
+                            <li> <span><i class="fas fa-stethoscope"></i></span> Famous Treatments </li>
+
+
+
+                        </ul>
+                        <div class="famous-treatment">
+                            <button>Multi Organ Transplant</button>
+                            <button>Orthopedic Surgery</button>
+                            <button>Infertility Treatment</button>
+                            <button>Dentistry</button>
+                            <button>Cardiology</button>
+                            <button>Cancer</button>
+                            <button>+40 more</button>
+
+                        </div>
+                        <button class="secondary-bttn-dark ">Call Now</button>
+                    </div>
+                    <figure>
+                        <a href="hospital-profile"> <img
+                                src="https://static.lyfboat.com/lyfboat/uploads/hospital_images/1+-+Indraprastha+Apollo/Slider/indraprastha_apollo.jpg"
+                                alt="">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="need-help-section">
+            <article>
+                <h2>Need Help?</h2>
+                <p>Just let us know, we will happy to assist you</p>
+            </article>
+            <button class="secondary-bttn-light sub-section">Submit your enquiry</button>
+        </section>
+    </main>
+    <footer>
+        <a href="." class="footer-img"><img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/footer.png" alt=""></a>
+        <div class="footer-links">
+            <a href="doctor">Doctor</a>
+            <a href="hospital">Hospital</a>
+            <a href="">Treatment</a>
+            <a href="contactus">Contact Us</a>
+            <a href="faq">FAQs</a>
+        </div>
+        <div class="social-media-links">
+            <a href=""> <i class="fab fa-facebook-f"></i></a>
+
+            <a href=""> <i class="fab fa-pinterest-p"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+        <h5>All Rights Reserved. © tvastra 2018 </h5>
+    </footer>
+</body>
+
+</html>

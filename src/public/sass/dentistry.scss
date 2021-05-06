@@ -1,0 +1,558 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(139, 139, 139);
+  --black: black;
+}
+.dentistry-heading {
+  padding: 0;
+
+  figure {
+    position: relative;
+    height: 18rem;
+
+    h2 {
+      position: absolute;
+      z-index: 3;
+
+      top: 40%;
+      color: var(--white);
+    }
+    p {
+      position: absolute;
+      z-index: 3;
+
+      color: var(--white);
+
+      top: 55%;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      position: absolute;
+      background-image: linear-gradient(
+        to left,
+        rgba(34, 25, 25, 0),
+        var(--light-blue-text)
+      );
+    }
+  }
+}
+.vaccination-section {
+  figure {
+    figcaption {
+      h3,
+      p {
+        text-align: left;
+      }
+      ul {
+        li {
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+          &::before {
+            content: "\2022";
+            color: var(--light-blue-text);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+  .icons-para {
+    figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 1.8rem;
+        padding: 1rem;
+        border-radius: 100%;
+        background-color: var(--light-blue);
+      }
+      .fa-tablets {
+        padding: 0.85rem;
+      }
+      figcaption {
+        h4 {
+          text-align: center;
+        }
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .service-cards {
+    .service-card {
+      border: 1px solid var(--light-grey-txt);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      h4 {
+        text-align: left;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -60%;
+          left: -9%;
+          width: 1.2rem;
+
+          height: 100%;
+          border-bottom: 3px solid var(--light-blue-text);
+        }
+      }
+      ul {
+        li {
+          border-bottom: 1px solid var(--light-grey-txt);
+          padding-top: 1rem;
+          font-size: 0.9rem;
+          display: flex;
+          justify-content: space-between;
+          font-family: nexafont-bold;
+          h5 {
+            text-align: left;
+            padding-top: 1rem;
+            padding-bottom: 0;
+
+            width: 30%;
+          }
+          span {
+            color: var(--light-grey-txt);
+          }
+        }
+      }
+    }
+  }
+}
+.more-services-section {
+  background-color: var(--light-blue);
+  height: 63rem;
+  padding-bottom: 1.2rem;
+
+  h2 {
+    color: var(--white);
+    // padding: 0;
+  }
+  .treatment-card1 {
+    .splide__arrows {
+      .splide__arrow--prev {
+        padding: 0.7rem;
+        top: 2%;
+        left: 40%;
+        font-size: 1rem;
+        background-color: var(--white);
+        opacity: 1;
+      }
+      .splide__arrow--next {
+        padding: 0.7rem;
+
+        top: 2%;
+        right: 38%;
+        font-size: 1rem;
+        background-color: var(--white);
+        opacity: 1;
+      }
+    }
+    .splide__pagination {
+      display: none;
+    }
+
+    .splide__track {
+      //  border: 1px solid black;
+      height: 57rem;
+      padding-top: 3rem;
+      .splide__list {
+        .splide__slide {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          figure {
+            overflow: hidden;
+            margin-right: 0.5rem;
+
+            border-radius: 1rem;
+            height: 17rem;
+            img {
+              height: 80%;
+            }
+            figcaption {
+              h4 {
+                text-align: left;
+
+                position: relative;
+                margin-left: 2rem;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: -60%;
+                  left: -10%;
+                  width: 1.8rem;
+
+                  height: 100%;
+                  border-bottom: 3px solid var(--light-blue-text);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .treatment-card {
+    display: none;
+    .splide__arrows {
+      .splide__arrow--prev {
+        top: 6%;
+        left: 93%;
+        font-size: 1rem;
+        background-color: var(--white);
+        opacity: 1;
+      }
+      .splide__arrow--next {
+        top: 6%;
+        font-size: 1rem;
+        background-color: var(--white);
+        opacity: 1;
+      }
+    }
+    .splide__pagination {
+      display: none;
+    }
+
+    .splide__track {
+      height: 25rem;
+      .splide__list {
+        .splide__slide {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+
+          figure {
+            overflow: hidden;
+            margin-right: 0.5rem;
+
+            border-radius: 1rem;
+            height: 17rem;
+            img {
+              height: 80%;
+            }
+            figcaption {
+              h4 {
+                text-align: left;
+
+                position: relative;
+                margin-left: 2rem;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: -60%;
+                  left: -10%;
+                  width: 2.2rem;
+
+                  height: 100%;
+                  border-bottom: 3px solid var(--light-blue-text);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*------------Ipad-View-----------*/
+@media (min-width: 767px) and (max-width: 1024px) {
+  .vaccination-section {
+    figure {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 2rem 1fr;
+      grid-gap: 1rem;
+      h2 {
+        grid-row: 1/2;
+        grid-column: 1/3;
+
+        text-align: left;
+      }
+      img {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+
+      figcaption {
+        grid-row: 2/3;
+        grid-column: 2/3;
+
+        h3,
+        p {
+          text-align: left;
+        }
+        ul {
+          li {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            &::before {
+              content: "\2022";
+              color: var(--light-blue-text);
+              font-weight: bold;
+              display: inline-block;
+              width: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+    .icons-para {
+      padding: 1.5rem 0;
+
+      figure {
+        width: 32%;
+
+        .fa-tablets {
+          padding: 0.95rem;
+        }
+        figcaption {
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .service-cards {
+      align-items: flex-start;
+      .service-card {
+        width: 49%;
+
+        ul {
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .more-services-section {
+    padding-bottom: 0;
+    height: 27rem;
+
+    position: relative;
+
+    h2 {
+      position: absolute;
+
+      top: 9%;
+      text-align: left;
+    }
+    .treatment-card1 {
+      display: none;
+    }
+    .treatment-card {
+      display: block;
+
+      .splide__arrows {
+        .splide__arrow--prev {
+          top: 6%;
+          left: 86%;
+          font-size: 1.1rem;
+          background-color: var(--white);
+          opacity: 1;
+          padding: 0.7rem;
+        }
+        .splide__arrow--next {
+          padding: 0.7rem;
+
+          top: 6%;
+          font-size: 1.1rem;
+          background-color: var(--white);
+          opacity: 1;
+        }
+      }
+      .splide__track {
+        margin-top: 1rem;
+        .splide__list {
+          .splide__slide {
+            figure {
+              width: 32%;
+              height: 18rem;
+              figcaption {
+                h4 {
+                  &::before {
+                    content: "";
+                    width: 2rem;
+                    left: -16%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*------------Web-View-----------*/
+@media (min-width: 1025px) {
+  .dentistry-heading {
+    padding-bottom: 0;
+    height: 22rem;
+    figure {
+      height: 100%;
+      img {
+        object-position: right top;
+      }
+      h2 {
+        left: 9.5%;
+      }
+      p {
+        left: 9.5%;
+      }
+    }
+  }
+  .vaccination-section {
+    padding: 3rem 9rem 2rem 9rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 0.6fr;
+    align-items: flex-start;
+    figure {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2rem 1fr;
+      grid-gap: 2rem;
+      h2 {
+        grid-row: 1/2;
+        grid-column: 1/3;
+
+        text-align: left;
+      }
+      img {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+
+      figcaption {
+        grid-row: 2/3;
+        grid-column: 2/3;
+
+        h3,
+        p {
+          text-align: left;
+        }
+        ul {
+          li {
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+    .icons-para {
+      padding-top: 2rem;
+      figure {
+        width: 32%;
+
+        i {
+          padding: 2rem;
+          font-size: 2.5rem;
+        }
+        .fa-tablets {
+          padding: 2rem;
+        }
+        figcaption {
+          p {
+            font-size: 1.1rem;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+    .service-cards {
+      align-items: flex-end;
+      flex-direction: column;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      .service-card {
+        width: 80%;
+
+        ul {
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .more-services-section {
+    position: relative;
+    padding: 0rem 9rem 1rem 9rem;
+    height: 27rem;
+    h2 {
+      position: absolute;
+
+      top: 11%;
+      text-align: left;
+    }
+    .treatment-card1 {
+      display: none;
+    }
+    .treatment-card {
+      display: block;
+      .splide__arrows {
+        .splide__arrow--prev {
+          top: 8%;
+          left: 92.5%;
+          font-size: 1rem;
+          background-color: var(--white);
+          opacity: 1;
+          padding: 0.6rem;
+        }
+        .splide__arrow--next {
+          padding: 0.6rem;
+
+          top: 8%;
+          font-size: 1rem;
+          background-color: var(--white);
+          opacity: 1;
+        }
+      }
+      padding-top: 2.5rem;
+
+      .splide__track {
+        height: 19rem;
+        padding-top: 2rem;
+        .splide__track {
+          .splide__slide {
+            figure {
+              box-shadow: var(--black) 1px 1px 1px;
+
+              figcaption {
+                h4 {
+                  &::before {
+                    content: "";
+
+                    left: -7.5%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

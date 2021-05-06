@@ -1,0 +1,294 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(139, 139, 139);
+  --black: black;
+}
+
+.contact-heading {
+  padding: 0;
+}
+
+.contact-heading figure {
+  position: relative;
+  height: 18rem;
+}
+
+.contact-heading figure h2 {
+  position: absolute;
+  top: 40%;
+  color: var(--white);
+}
+
+.contact-heading figure p {
+  position: absolute;
+  color: var(--white);
+  top: 55%;
+}
+
+.map-section iframe {
+  height: 14rem;
+  width: 100%;
+}
+
+.send-message-section {
+  padding: 0;
+}
+
+.send-message-section ul {
+  padding: 2rem 1rem 0.5rem 1rem;
+}
+
+.send-message-section ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.send-message-section ul li i {
+  color: var(--light-blue-text);
+  font-size: 1.5rem;
+}
+
+.send-message-section ul li h4 {
+  width: 60%;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.send-message-section ul li p {
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: left;
+  padding-left: 2.3rem;
+}
+
+.send-message-section form {
+  background-color: var(--light-blue);
+}
+
+.send-message-section form .name {
+  margin-top: 1rem;
+}
+
+.send-message-section form input {
+  margin-top: 0.5rem;
+  width: 90%;
+  margin-bottom: 0;
+}
+
+.send-message-section form .secondary-bttn-light {
+  border-radius: 0;
+  margin: 0.5rem 0 1rem 11.5rem;
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .map-section iframe {
+    height: 18rem;
+    width: 100%;
+  }
+  .send-message-section ul {
+    padding: 1.5rem 1rem 0.5rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .send-message-section ul li {
+    width: 33%;
+  }
+  .send-message-section ul li h4 {
+    width: 70%;
+  }
+  .send-message-section ul li p {
+    font-size: 0.9rem;
+  }
+  .send-message-section form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2rem;
+  }
+  .send-message-section form input {
+    margin-top: 0;
+  }
+  .send-message-section form .name {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    margin-left: 2rem;
+  }
+  .send-message-section form .address {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-left: 2rem;
+  }
+  .send-message-section form .subject {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    margin-left: 2rem;
+  }
+  .send-message-section form .message {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+    padding-top: 22%;
+    padding-bottom: 20%;
+    margin-top: 0.5rem;
+  }
+  .send-message-section form .secondary-bttn-light {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    width: 50%;
+    margin-left: 9.6rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact-heading figure h2 {
+    padding-left: 5rem;
+  }
+  .contact-heading figure p {
+    padding-left: 5rem;
+  }
+  .map-section iframe {
+    height: 22rem;
+    width: 100%;
+  }
+  .send-message-section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 1px solid var(--light-grey-txt);
+    padding: 2rem 0;
+  }
+  .send-message-section ul {
+    width: 25%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .send-message-section ul li {
+    width: 100%;
+  }
+  .send-message-section ul li h4 {
+    width: 70%;
+  }
+  .send-message-section ul li p {
+    font-size: 0.9rem;
+  }
+  .send-message-section form {
+    height: 20rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2rem;
+    width: 64.5%;
+  }
+  .send-message-section form input {
+    margin-top: 0;
+  }
+  .send-message-section form .name {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    margin-left: 2rem;
+  }
+  .send-message-section form .address {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-left: 2rem;
+  }
+  .send-message-section form .subject {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    margin-left: 2rem;
+  }
+  .send-message-section form .message {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+    padding-top: 18.2%;
+    padding-bottom: 18.5%;
+    margin-top: 0.5rem;
+  }
+  .send-message-section form .secondary-bttn-light {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    width: 50%;
+    margin-left: 12.2rem;
+  }
+}
+/*# sourceMappingURL=contactus.css.map */

@@ -1,0 +1,264 @@
+.disabled {
+  opacity: 0.4;
+}
+.model-box-background {
+  background: #0009;
+  z-index: 13;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.model-box {
+  max-width: 90%;
+  width: 30rem;
+  background: var(--light-grey);
+  padding: 0.5rem;
+  transition: transform 0.3s ease-in;
+  animation: grow 0.3s ease-out;
+  .heading {
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      color: var(--light-blue-text);
+    }
+    border-bottom: 1px solid black;
+  }
+  label {
+    font-size: 1.2rem;
+    font-family: nexafont-bold;
+    color: var(--dark-blue);
+    padding: 0.5rem 0;
+  }
+  select {
+    width: 100%;
+    font-family: nexafont;
+    background-color: var(--white);
+    &:focus {
+      border: 3px solid var(--light-blue-text);
+    }
+    option {
+      font-family: nexafont;
+      &:hover {
+        background-color: var(--light-blue);
+      }
+      &:checked {
+        box-shadow: 0 0 10px 100px var(--light-green) inset;
+      }
+    }
+  }
+  input {
+    border: 3px solid var(--light-grey);
+    padding: 0.8rem;
+    &:focus {
+      border: 3px solid var(--light-blue-text);
+    }
+    &:hover {
+      border: 3px solid var(--light-blue-text);
+    }
+  }
+  .half-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+  }
+  .button-group {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-end;
+    grid-gap: 1rem;
+    .danger {
+      background-color: rgb(197, 6, 6);
+      padding: 0.5rem 1rem;
+      color: var(--white);
+      font-size: 1rem;
+    }
+    .success {
+      background-color: var(--green);
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: var(--white);
+    }
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.model-box > div {
+  padding: 0.5rem;
+}
+.clocklet {
+  border: 1px solid black;
+}
+@media (min-width: 1025px) {
+  main {
+    background-color: var(--light-grey);
+
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .dashboard {
+        width: 28%;
+
+        h3 {
+          text-align: left;
+          font-size: 1.8rem;
+          padding: 1rem 0;
+        }
+        ul {
+          li {
+            width: 95%;
+            margin-bottom: 0.2rem;
+            a {
+              display: inline-block;
+              border-radius: 0.3rem;
+              padding: 1rem;
+              width: 100%;
+              i {
+                color: var(--light-blue-text);
+
+                width: 2rem;
+              }
+              span {
+                font-size: 1.3rem;
+                color: var(--dark-blue);
+              }
+
+              &:hover {
+                background-color: var(--light-grey-txt);
+                border-left: 6px solid var(--light-blue-text);
+                span {
+                  color: var(--light-blue-text);
+                  font-family: nexafont-bold;
+                }
+              }
+            }
+            .links {
+              background-color: var(--light-grey-txt);
+              border-left: 6px solid var(--light-blue-text);
+              span {
+                color: var(--light-blue-text);
+                font-family: nexafont-bold;
+              }
+            }
+          }
+        }
+      }
+      .schedules-div {
+        position: relative;
+        width: 72%;
+        padding: 2rem;
+        background-color: var(--white);
+        border-radius: 0.3rem;
+
+        .account {
+          border-bottom: 2px solid var(--light-grey);
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 1rem;
+          h2 {
+            width: 10rem;
+            font-size: 2.2rem;
+
+            padding: 0;
+          }
+          .secondary-bttn-light {
+            padding: 0.8rem 2.5rem;
+            font-size: 1.1rem;
+          }
+        }
+        input {
+          border: 1px solid black;
+        }
+        .schedule-container {
+          padding: 2rem 0;
+        }
+        .schedule {
+          background-color: var(--light-grey);
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 1rem;
+          padding: 1rem;
+          border-radius: 0.5rem;
+
+          h3 {
+            width: 15%;
+            text-align: left;
+            color: var(--light-blue-text);
+            padding: 0;
+            font-size: 1.8rem;
+          }
+          .hospital-time {
+            width: 40%;
+            padding: 0 3rem;
+            align-items: center;
+            justify-content: center;
+
+            h4 {
+              padding: 0rem;
+            }
+            p {
+              text-align: center;
+              padding: 1rem;
+            }
+          }
+          .slot-bttn {
+            display: flex;
+            flex-direction: row;
+
+            width: 40%;
+
+            .secondary-bttn-dark {
+              padding: 0.8rem 1.2rem;
+            }
+          }
+          .checkbox-input {
+            width: 5%;
+            input {
+            }
+          }
+          .time-slots {
+            justify-content: flex-start;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            .one-slot {
+              background-color: var(--white);
+
+              justify-content: flex-start;
+              p {
+                text-align: center;
+
+                width: 85%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+              }
+              input {
+                margin-top: 0.5rem;
+                width: 10%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

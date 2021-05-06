@@ -1,0 +1,341 @@
+.disabled {
+  opacity: 0.4;
+}
+
+.model-box-background {
+  background: #0009;
+  z-index: 13;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.model-box {
+  max-width: 90%;
+  width: 30rem;
+  background: var(--light-grey);
+  padding: 0.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  -webkit-animation: grow 0.3s ease-out;
+          animation: grow 0.3s ease-out;
+}
+
+.model-box .heading {
+  border-bottom: 1px solid black;
+}
+
+.model-box .heading h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--light-blue-text);
+}
+
+.model-box label {
+  font-size: 1.2rem;
+  font-family: nexafont-bold;
+  color: var(--dark-blue);
+  padding: 0.5rem 0;
+}
+
+.model-box select {
+  width: 100%;
+  font-family: nexafont;
+  background-color: var(--white);
+}
+
+.model-box select:focus {
+  border: 3px solid var(--light-blue-text);
+}
+
+.model-box select option {
+  font-family: nexafont;
+}
+
+.model-box select option:hover {
+  background-color: var(--light-blue);
+}
+
+.model-box select option:checked {
+  -webkit-box-shadow: 0 0 10px 100px var(--light-green) inset;
+          box-shadow: 0 0 10px 100px var(--light-green) inset;
+}
+
+.model-box input {
+  border: 3px solid var(--light-grey);
+  padding: 0.8rem;
+}
+
+.model-box input:focus {
+  border: 3px solid var(--light-blue-text);
+}
+
+.model-box input:hover {
+  border: 3px solid var(--light-blue-text);
+}
+
+.model-box .half-inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.model-box .button-group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  grid-gap: 1rem;
+}
+
+.model-box .button-group .danger {
+  background-color: #c50606;
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.model-box .button-group .success {
+  background-color: var(--green);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.model-box > div {
+  padding: 0.5rem;
+}
+
+.clocklet {
+  border: 1px solid black;
+}
+
+@media (min-width: 1025px) {
+  main {
+    background-color: var(--light-grey);
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section .dashboard {
+    width: 28%;
+  }
+  main section .dashboard h3 {
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  main section .dashboard ul li {
+    width: 95%;
+    margin-bottom: 0.2rem;
+  }
+  main section .dashboard ul li a {
+    display: inline-block;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  main section .dashboard ul li a i {
+    color: var(--light-blue-text);
+    width: 2rem;
+  }
+  main section .dashboard ul li a span {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+  }
+  main section .dashboard ul li a:hover {
+    background-color: var(--light-grey-txt);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li a:hover span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .dashboard ul li .links {
+    background-color: var(--light-grey-txt);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li .links span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .schedules-div {
+    position: relative;
+    width: 72%;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.3rem;
+  }
+  main section .schedules-div .account {
+    border-bottom: 2px solid var(--light-grey);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 1rem;
+  }
+  main section .schedules-div .account h2 {
+    width: 10rem;
+    font-size: 2.2rem;
+    padding: 0;
+  }
+  main section .schedules-div .account .secondary-bttn-light {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  main section .schedules-div input {
+    border: 1px solid black;
+  }
+  main section .schedules-div .schedule-container {
+    padding: 2rem 0;
+  }
+  main section .schedules-div .schedule {
+    background-color: var(--light-grey);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  main section .schedules-div .schedule h3 {
+    width: 15%;
+    text-align: left;
+    color: var(--light-blue-text);
+    padding: 0;
+    font-size: 1.8rem;
+  }
+  main section .schedules-div .schedule .hospital-time {
+    width: 40%;
+    padding: 0 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section .schedules-div .schedule .hospital-time h4 {
+    padding: 0rem;
+  }
+  main section .schedules-div .schedule .hospital-time p {
+    text-align: center;
+    padding: 1rem;
+  }
+  main section .schedules-div .schedule .slot-bttn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 40%;
+  }
+  main section .schedules-div .schedule .slot-bttn .secondary-bttn-dark {
+    padding: 0.8rem 1.2rem;
+  }
+  main section .schedules-div .schedule .checkbox-input {
+    width: 5%;
+  }
+  main section .schedules-div .schedule .time-slots {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 1rem;
+  }
+  main section .schedules-div .schedule .time-slots .one-slot {
+    background-color: var(--white);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main section .schedules-div .schedule .time-slots .one-slot p {
+    text-align: center;
+    width: 85%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  main section .schedules-div .schedule .time-slots .one-slot input {
+    margin-top: 0.5rem;
+    width: 10%;
+  }
+}
+/*# sourceMappingURL=schedules.css.map */

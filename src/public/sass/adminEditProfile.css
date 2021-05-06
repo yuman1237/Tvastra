@@ -1,0 +1,322 @@
+.visible {
+  display: block !important;
+}
+
+.active {
+  background-color: var(--light-blue-text) !important;
+}
+
+.active .pageIndexLink {
+  color: white !important;
+}
+
+nav {
+  -webkit-box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+          box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+}
+
+.nav-buttns .secondary-bttn-dark {
+  visibility: hidden;
+}
+
+@media (min-width: 1025px) {
+  main {
+    background-color: var(--light-grey);
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section .dashboard {
+    width: 28%;
+  }
+  main section .dashboard h3 {
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  main section .dashboard ul li {
+    width: 95%;
+    margin-bottom: 0.2rem;
+  }
+  main section .dashboard ul li a {
+    display: inline-block;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  main section .dashboard ul li a i {
+    color: var(--light-blue-text);
+    width: 2rem;
+  }
+  main section .dashboard ul li a span {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+  }
+  main section .dashboard ul li a:hover {
+    background-color: var(--light-grey-txt);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li a:hover span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .dashboard ul li .links {
+    background-color: var(--light-grey);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li .links span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section form {
+    width: 72%;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.3rem;
+  }
+  main section form label {
+    font-size: 1.2rem;
+    font-family: nexafont-bold;
+    color: var(--dark-blue);
+    padding-bottom: 0.3rem;
+  }
+  main section form input {
+    border: 3px solid var(--light-grey);
+    padding: 0.8rem;
+  }
+  main section form input:focus {
+    border: 3px solid var(--light-blue-text);
+  }
+  main section form input:hover {
+    border: 3px solid var(--light-blue-text);
+  }
+  main section form .account {
+    border-bottom: 2px solid var(--light-grey);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 1rem;
+  }
+  main section form .account h2 {
+    width: 10rem;
+    font-size: 2.2rem;
+    padding: 0;
+  }
+  main section form .account .secondary-bttn-light {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  main section form .profile-name {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--light-grey);
+  }
+  main section form .profile-name .profile-pic-select {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    height: 6rem;
+  }
+  main section form .profile-name .profile-pic-select figure {
+    margin-top: 0.5rem;
+    border-radius: 100%;
+    height: 5rem;
+    width: 5rem;
+    overflow: hidden;
+  }
+  main section form .profile-name .profile-pic-select .select-photo {
+    width: 60%;
+  }
+  main section form .profile-name .profile-pic-select .select-photo span {
+    color: var(--dark-blue);
+    font-family: nexafont;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  main section form .profile-name .profile-pic-select .select-photo label {
+    color: var(--light-blue-text);
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  main section form .profile-name .input-label {
+    margin-bottom: 2.5rem;
+  }
+  main section form .inputs-div {
+    border-bottom: 2px solid var(--light-grey);
+    padding: 2rem 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+  main section form .inputs-div .input-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section form .inputs-div .input-label #gender {
+    border: 3px solid var(--light-grey);
+    background-color: var(--white);
+    width: 100%;
+    padding: 0.65rem;
+    margin-bottom: 0.5rem;
+    font-family: nexafont;
+  }
+  main section form .inputs-div .input-label #gender option {
+    font-family: nexafont;
+  }
+  main section form .inputs-div .input-label #gender:focus {
+    border: 3px solid var(--light-blue-text);
+  }
+  main section form .inputs-div .input-label #gender:hover {
+    border: 3px solid var(--light-blue-text);
+  }
+  main section form .inputs-div .input-label #pnumber {
+    background-color: var(--light-grey-txt);
+  }
+  main section form .inputs-div .edit-pen {
+    position: relative;
+  }
+  main section form .inputs-div .edit-pen span {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    color: var(--light-blue-text);
+  }
+  main section form .inputs-div .edit-pen span:hover {
+    color: var(--dark-blue);
+  }
+  main section form .inputs-div-tag {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+    grid-gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--light-grey);
+  }
+  main section form .inputs-div-tag .textrea {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 100%;
+  }
+  main section form .inputs-div-tag .textrea label {
+    padding-bottom: 0.3rem;
+  }
+  main section form .inputs-div-tag .textrea textarea {
+    width: 100%;
+    height: 85%;
+    padding: 0.5rem;
+    border: 3px solid var(--light-grey);
+    outline: none;
+  }
+  main section form .inputs-div-tag .textrea textarea:focus {
+    border: 3px solid var(--light-blue-text);
+  }
+  main section form .inputs-div-tag .textrea textarea:hover {
+    border: 3px solid var(--light-blue-text);
+  }
+  main section form .inputs-div-tag .input-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: 5rem;
+  }
+  main section form .inputs-div-tag .input-label .tagify {
+    padding: 0.3rem;
+    margin: 0;
+    width: 258px;
+    border: 3px solid var(--light-grey);
+    overflow: auto;
+    white-space: nowrap;
+  }
+  main section form .inputs-div-tag .input-label .tagify .tagify__tag-text {
+    display: inline-block;
+    color: var(--dark-blue);
+    font-family: nexafont;
+  }
+  main section form .inputs-div-tag .input-label .tags-input:hover {
+    border: 3px solid var(--light-blue-text);
+  }
+}
+/*# sourceMappingURL=adminEditProfile.css.map */

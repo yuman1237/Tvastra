@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sass/reset.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="sass/doctorForm.css">
+
+
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css">
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <title>Doctor Form</title>
+</head>
+
+<body>
+    <nav>
+        <a href=""> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+        <div class="nav-links">
+            <a href="">Doctor</a>
+
+            <a href="">Hospital</a>
+
+            <a href="">Treatment</a>
+
+
+
+            <a href="">About</a>
+
+        </div>
+        <div class="nav-buttns">
+
+
+            <button class="secondary-bttn-dark">Get a Qoute</button>
+
+        </div>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <main>
+        <section>
+
+            <form action="/doctor_form" method="POST" enctype="multipart/form-data">
+                <h2>
+                    Welcome Doctor
+                </h2>
+                <p>Complete Your Profile to Proceed Further</p>
+                <textarea type="text" placeholder="Describe Yourself" name="describe"></textarea>
+                <div class="choose_file">
+                    <label for="myfile">Upload your photo </label>
+                    <input type="file" id="myfile" name="myfile">
+                </div>
+
+                <input type="text" name="hospitals" placeholder="Your hospitals" data-tag-input="" required="">
+                <input type="text" name="achievement" placeholder="Your achievements" data-tag-input="" required="">
+                <input type="number" placeholder="Years of Experience(in Years)" name="experience">
+                <input type="text" name="qualification" placeholder="Your qualifications" data-tag-input="" required="">
+                <input type="text" name="awards" placeholder="Awards (if any)" data-tag-input="" required="">
+                <input type="text" name="spcialization" placeholder="Your specializations" data-tag-input=""
+                    required="">
+
+                <input type="number" placeholder="Your average fees (in rupees)" name="avgfees">
+
+
+
+                <button class="secondary-bttn-dark" type="submit">SUBMIT <i class="fas fa-arrow-right"></i></button>
+
+            </form>
+            <h5>All Rights Reserved. © tvastra 2020 </h5>
+        </section>
+    </main>
+
+
+    <script>
+
+        var tagInput = document.querySelectorAll("[data-tag-input]");
+        for (i = 0; i < tagInput.length; i++) {
+            new Tagify(tagInput[i], {
+                duplicates: false,
+                trim: true,
+                maxTags: 5
+            });
+        }
+
+    </script>
+</body>
+
+</html>

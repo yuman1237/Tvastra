@@ -1,0 +1,141 @@
+.visible {
+  display: block !important;
+}
+.active {
+  background-color: var(--light-blue-text) !important;
+  .pageIndexLink {
+    color: white !important;
+  }
+}
+nav {
+  box-shadow: 0px 11px 7px 0px rgba(0, 0, 0, 0.54);
+  background-color: white;
+}
+.nav-buttns {
+  .secondary-bttn-dark {
+    visibility: hidden;
+  }
+}
+body {
+  background-color: var(--light-grey);
+}
+@media (min-width: 1025px) {
+  main {
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .dashboard {
+        width: 28%;
+
+        h3 {
+          text-align: left;
+          font-size: 1.8rem;
+          padding: 1rem 0;
+        }
+        ul {
+          li {
+            width: 95%;
+            margin-bottom: 0.2rem;
+            a {
+              display: inline-block;
+              border-radius: 0.3rem;
+              padding: 1rem;
+              width: 100%;
+              i {
+                color: var(--light-blue-text);
+
+                width: 2rem;
+              }
+              span {
+                font-size: 1.3rem;
+                color: var(--dark-blue);
+              }
+
+              &:hover {
+                background-color: var(--light-grey-txt);
+                border-left: 6px solid var(--light-blue-text);
+                span {
+                  color: var(--light-blue-text);
+                  font-family: nexafont-bold;
+                }
+              }
+            }
+            .links {
+              background-color: var(--light-grey);
+              border-left: 6px solid var(--light-blue-text);
+              span {
+                color: var(--light-blue-text);
+                font-family: nexafont-bold;
+              }
+            }
+          }
+        }
+      }
+      .appointment {
+        width: 72%;
+        background-color: var(--white);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        .appointment-sub {
+          h3 {
+            text-align: left;
+          }
+          .container,
+          .complete-container {
+            margin-bottom: 2rem;
+            .appoint {
+              border: 1px solid var(--light-grey-txt);
+              background-color: var(--light-grey);
+              border-radius: 0.5rem;
+              height: 9rem;
+              justify-content: flex-start;
+              align-items: center;
+              padding: 1rem;
+              margin-bottom: 1rem;
+              big {
+                width: 22%;
+                background-color: var(--white);
+                font-family: nexafont-bold;
+                padding: 2.8rem 2.5rem;
+                text-align: center;
+                margin-left: 1rem;
+                font-size: 1.4rem;
+              }
+              div {
+                width: 25%;
+                margin-left: 1rem;
+
+                p {
+                  padding-bottom: 0.3rem;
+                  font-family: nexafont-bold;
+                  text-align: center;
+                  color: var(--light-blue-text);
+                }
+                small {
+                  width: 100%;
+                  text-align: center;
+                  font-family: nexafont-bold;
+                  padding: 0.2rem;
+                  color: rgb(161, 161, 161);
+                }
+
+                .status {
+                  background-color: rgb(141, 19, 19);
+                  border-radius: 1.2rem;
+                  padding: 0;
+                  width: 70%;
+                  color: var(--white);
+                  font-size: 1rem;
+                  margin-top: 0.3rem;
+                  margin-left: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

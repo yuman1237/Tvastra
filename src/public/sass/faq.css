@@ -1,0 +1,136 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(177, 174, 174);
+  --black: black;
+  --very-light-blue: #b4daf3;
+}
+
+.contact-heading {
+  padding: 0;
+}
+
+.contact-heading figure {
+  position: relative;
+  height: 18rem;
+}
+
+.contact-heading figure h2 {
+  position: absolute;
+  top: 40%;
+  color: var(--white);
+}
+
+.contact-heading figure p {
+  position: absolute;
+  color: var(--white);
+  top: 55%;
+}
+
+.faq-section ul .doctor-info-heading {
+  color: var(--light-blue-text);
+  font-family: nexafont-bold;
+  padding: 1rem 0;
+  width: 100%;
+  outline: none;
+  text-align: left;
+  font-size: 1.2rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: var(--white);
+}
+
+.faq-section ul .doctor-info-para {
+  display: none;
+  background-color: var(--very-light-blue);
+  border: none;
+  overflow: hidden;
+}
+
+.faq-section ul .doctor-info-para p {
+  text-align: left;
+  padding: 0.3rem;
+}
+
+.faq-section ul .doctor-info-heading:after {
+  content: "\2B9F";
+  float: right;
+  font-size: 0.8rem;
+  background-color: var(--very-light-blue);
+  border-radius: 100%;
+  padding: 0.07rem 0.25rem;
+}
+
+.faq-section ul .active:after {
+  content: "\2B9D";
+  font-size: 0.8rem;
+}
+
+.need-help-section {
+  background-color: var(--light-blue);
+}
+
+.need-help-section h2 {
+  color: var(--white);
+}
+
+.need-help-section p {
+  padding-left: 0.2rem;
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .faq-section ul .doctor-info-heading {
+    font-size: 1.5rem;
+  }
+  .faq-section ul .doctor-info-para p {
+    line-height: 1.6rem;
+  }
+  .faq-section ul .doctor-info-heading:after {
+    font-size: 0.9rem;
+  }
+  .faq-section ul .active:after {
+    content: "\2B9D";
+    font-size: 0.9rem;
+  }
+  .need-help-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact-heading figure h2 {
+    left: 9.5%;
+  }
+  .contact-heading figure p {
+    left: 9.5%;
+  }
+  .faq-section ul .doctor-info-heading {
+    font-size: 1.7rem;
+  }
+  .faq-section ul .doctor-info-para p {
+    line-height: 1.8rem;
+  }
+  .faq-section ul .doctor-info-heading:after {
+    font-size: 1.2rem;
+  }
+  .faq-section ul .active:after {
+    content: "\2B9D";
+    font-size: 1.2rem;
+  }
+  .need-help-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .need-help-section p {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=faq.css.map */

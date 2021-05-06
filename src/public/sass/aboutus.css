@@ -1,0 +1,324 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(139, 139, 139);
+  --black: black;
+}
+
+/*----------Mobile-View--------*/
+.living-section {
+  padding: 0;
+}
+
+.living-section figure {
+  height: 24rem;
+  position: relative;
+}
+
+.living-section figure::after {
+  position: absolute;
+  content: "";
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--black);
+  opacity: 0.4;
+}
+
+.living-section figure h2 {
+  position: absolute;
+  color: var(--white);
+  z-index: 5;
+  top: 40%;
+}
+
+.living-section figure p {
+  position: absolute;
+  color: var(--light-grey);
+  z-index: 5;
+  top: 50%;
+}
+
+.you-will-section .signature {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.your-well-section {
+  background-color: var(--black);
+}
+
+.your-well-section article h2 {
+  color: var(--white);
+}
+
+.your-well-section article p {
+  color: var(--light-grey);
+}
+
+.your-well-section ul li {
+  padding: 1rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+
+.your-well-section ul li h3 {
+  color: var(--white);
+  padding-top: 1rem;
+}
+
+.your-well-section ul li p {
+  color: var(--light-grey);
+  font-size: 0.7rem;
+}
+
+.your-well-section video {
+  display: none;
+}
+
+.need-help-section {
+  background-color: var(--light-blue);
+}
+
+.need-help-section h2 {
+  color: var(--white);
+}
+
+.need-help-section p {
+  padding-left: 0.2rem;
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .living-section figure p {
+    padding: 0 1rem;
+  }
+  .you-will-section {
+    padding-bottom: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.8fr 1.2fr;
+        grid-template-columns: 1.8fr 1.2fr;
+    -ms-grid-rows: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+  }
+  .you-will-section article {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .you-will-section article h2,
+  .you-will-section article p {
+    text-align: left;
+  }
+  .you-will-section .doctor-img {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 95%;
+  }
+  .you-will-section .signature {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 0rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .your-well-section article h2,
+  .your-well-section article p {
+    text-align: left;
+  }
+  .your-well-section .secondary-bttn-light {
+    margin: 2rem 0;
+  }
+  .your-well-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .your-well-section ul li {
+    padding: 0.3rem;
+    width: 32%;
+  }
+  .your-well-section ul li p {
+    font-size: 0.9rem;
+  }
+  .need-help-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 1025px) {
+  .living-section {
+    height: 22rem;
+  }
+  .living-section figure img {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+  .living-section figure p {
+    padding-top: 1rem;
+  }
+  .living-section figure h2,
+  .living-section figure p {
+    text-align: center;
+  }
+  .you-will-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 10rem;
+        grid-template-rows: 1fr 10rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-bottom: 3rem;
+  }
+  .you-will-section article {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .you-will-section article h2 {
+    line-height: 2.8rem;
+  }
+  .you-will-section article h2,
+  .you-will-section article p {
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+  .you-will-section .doctor-img {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 100%;
+    width: 60%;
+    margin-left: 10rem;
+  }
+  .you-will-section .signature {
+    width: 55%;
+    height: 80%;
+    margin-bottom: 0rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .your-well-section {
+    background-color: var(--white);
+    position: relative;
+    padding: 0;
+    height: 45rem;
+  }
+  .your-well-section video {
+    display: inline-block;
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top center;
+       object-position: top center;
+    width: 100%;
+    height: 60rem;
+  }
+  .your-well-section article {
+    position: absolute;
+    z-index: 3;
+    top: 18.8%;
+    left: 9%;
+  }
+  .your-well-section article h2 {
+    line-height: 2.5rem;
+  }
+  .your-well-section article h2,
+  .your-well-section article p {
+    text-align: left;
+    width: 50%;
+  }
+  .your-well-section .secondary-bttn-light {
+    top: 69%;
+    left: 9%;
+    position: absolute;
+    z-index: 3;
+    margin: 2rem 0;
+  }
+  .your-well-section ul {
+    width: 43%;
+    z-index: 3;
+    left: 47.5%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .your-well-section ul li {
+    padding: 4rem 2rem 2rem 2rem;
+    width: 32%;
+  }
+  .your-well-section ul li h3 {
+    font-size: 2rem;
+  }
+  .your-well-section ul li p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .need-help-section {
+    padding-top: 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 12rem;
+  }
+  .need-help-section p {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=aboutus.css.map */

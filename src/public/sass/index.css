@@ -1,0 +1,720 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(233, 233, 233);
+  --light-grey-txt: rgb(179, 179, 179);
+  --black: black;
+}
+
+/* ---------------------Mobile-View-------------------- */
+.visible {
+  display: block !important;
+}
+
+.active {
+  border: 3px solid var(--light-blue) !important;
+  color: var(--dark-blue) !important;
+}
+
+.active .how-it-work-span {
+  color: var(--light-blue) !important;
+}
+
+.find-affordable-section {
+  background-color: var(--light-blue);
+}
+
+.find-affordable-section form .search-city-icons {
+  position: relative;
+}
+
+.find-affordable-section form .search-city-icons input {
+  padding-left: 1.3rem;
+}
+
+.find-affordable-section form .search-city-icons .fa-map-marker-alt {
+  position: absolute;
+  left: 2%;
+  top: 26%;
+}
+
+.find-affordable-section form .search-city-icons .fa-globe-europe {
+  position: absolute;
+  top: 30%;
+  left: 93%;
+}
+
+.find-affordable-section form button {
+  margin-top: 0.5rem;
+}
+
+.how-it-works-section div ul li button {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+  border: 3px solid var(--light-grey-txt);
+  color: var(--light-grey-txt);
+}
+
+.how-it-works-section div ul li button span {
+  color: var(--light-grey-txt);
+}
+
+.how-it-works-section div ul li button:hover {
+  border: 3px solid var(--light-blue);
+  color: var(--dark-blue);
+}
+
+.how-it-works-section div .bttn-ki-images {
+  width: 100%;
+}
+
+.how-it-works-section div .bttn-ki-images figure {
+  width: 100%;
+  display: none;
+}
+
+.how-it-works-section div .bttn-ki-images figcaption p {
+  padding-bottom: 0;
+}
+
+.world-class-expert-section {
+  background-color: var(--dark-blue);
+  padding-bottom: 1.2rem;
+}
+
+.world-class-expert-section article h2,
+.world-class-expert-section article p {
+  color: var(--white);
+}
+
+.world-class-expert-section .doctor-cards {
+  display: none;
+}
+
+.world-class-expert-section .ipad-mobile-doctor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.world-class-expert-section .ipad-mobile-doctor figure {
+  height: 29rem;
+  border-bottom: 0.3rem solid var(--light-blue);
+  background-color: var(--white);
+}
+
+.world-class-expert-section .ipad-mobile-doctor figure img {
+  height: 75%;
+}
+
+.world-class-expert-section .ipad-mobile-doctor figure h4 {
+  color: var(--light-blue-text);
+  position: relative;
+  text-align: left;
+  padding: 0.5rem 2rem;
+}
+
+.world-class-expert-section .ipad-mobile-doctor figure h4::before {
+  content: "";
+  width: 1.7rem;
+  left: -0.1%;
+  top: 56%;
+  position: absolute;
+  border-bottom: 3px solid var(--light-blue-text);
+}
+
+.world-class-expert-section .ipad-mobile-doctor figure div {
+  padding-left: 2rem;
+}
+
+.feature-medical-section {
+  padding-bottom: 1.2rem;
+}
+
+.feature-medical-section .patient-cards {
+  display: none;
+}
+
+.feature-medical-section .ipad-mobile-patient figure {
+  height: 20rem;
+  position: relative;
+}
+
+.feature-medical-section .ipad-mobile-patient figure h4 {
+  text-align: left;
+  color: var(--white);
+  position: absolute;
+  z-index: 5;
+  top: 84%;
+  left: 3%;
+}
+
+.feature-medical-section .ipad-mobile-patient figure p {
+  color: var(--white);
+  left: 3%;
+  position: absolute;
+  z-index: 5;
+  top: 90%;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.feature-medical-section .ipad-mobile-patient figure::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 25, 25, 0)), to(#0e0a0a));
+  background-image: linear-gradient(to bottom, rgba(34, 25, 25, 0), #0e0a0a);
+}
+
+.exclusive-services-section {
+  background-color: var(--light-grey);
+  padding-bottom: 1.2rem;
+}
+
+.exclusive-services-section .exclusive-cards figure {
+  height: 7rem;
+  width: 48%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.exclusive-services-section .exclusive-cards figure img {
+  height: 70%;
+  width: 65%;
+  margin-left: 17%;
+}
+
+.need-help-section {
+  background-color: var(--light-blue);
+}
+
+.need-help-section h2 {
+  color: var(--white);
+}
+
+.need-help-section p {
+  padding-left: 0.2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .find-affordable-section form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .find-affordable-section form .search-city-icons {
+    width: 31%;
+  }
+  .find-affordable-section form .search-city-icons input {
+    border: 1px solid var(--light-grey-txt);
+    padding-left: 1.3rem;
+    margin-bottom: 0;
+  }
+  .find-affordable-section form .search-city-icons input:active {
+    border: 1px solid var(--black);
+  }
+  .find-affordable-section form .search-city-icons .fa-map-marker-alt {
+    top: 31%;
+  }
+  .find-affordable-section form .search-city-icons .fa-globe-europe {
+    top: 33%;
+    left: 90%;
+  }
+  .find-affordable-section form .search-doctor {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .find-affordable-section form .search-doctor:active {
+    border: 1px solid var(--black);
+  }
+  .find-affordable-section form button {
+    margin-top: 0;
+    width: 19%;
+    height: 2.9rem;
+  }
+  .how-it-works-section div ul {
+    width: 49%;
+  }
+  .how-it-works-section div ul li button {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .how-it-works-section div .bttn-ki-images {
+    width: 45%;
+  }
+  .world-class-expert-section {
+    background-color: var(--dark-blue);
+    padding-bottom: 0.7rem;
+  }
+  .world-class-expert-section .ipad-mobile-doctor figure {
+    height: 30rem;
+    width: 48.5%;
+    margin-bottom: 1.5rem;
+  }
+  .feature-medical-section {
+    padding-bottom: 1.2rem;
+  }
+  .feature-medical-section .ipad-mobile-patient figure {
+    height: 22rem;
+    width: 49%;
+  }
+  .feature-medical-section .ipad-mobile-patient figure p {
+    font-size: 0.9rem;
+  }
+  .exclusive-services-section {
+    padding-bottom: 1.5rem;
+  }
+  .exclusive-services-section .exclusive-cards figure {
+    height: 8rem;
+    width: 32%;
+  }
+  .exclusive-services-section .exclusive-cards figure img {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .need-help-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/*------------------Web-View---------------*/
+@media (min-width: 1025px) {
+  .find-affordable-section {
+    background-image: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+    background-size: cover;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    position: relative;
+  }
+  .find-affordable-section .alert-message {
+    height: 4.5rem;
+    background-color: var(--white);
+    position: absolute;
+    top: 3%;
+    left: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 21rem;
+    border-left: 5px solid green;
+  }
+  .find-affordable-section .alert-message .msg-paras {
+    width: 60%;
+  }
+  .find-affordable-section .alert-message .msg-paras .message-para {
+    color: green;
+    font-family: nexafont-bold;
+    font-size: 0.8rem;
+    padding-bottom: 0;
+  }
+  .find-affordable-section .alert-message .msg-paras .main-message {
+    font-size: 1.2rem;
+  }
+  .find-affordable-section .alert-message i {
+    width: 15%;
+    font-size: 2.5rem;
+    color: green;
+  }
+  .find-affordable-section .alert-message #closebttn {
+    padding-left: 1rem;
+    width: 10%;
+    font-size: 3.5rem;
+    font-family: nexafont-bold;
+    color: var(--light-grey-txt);
+  }
+  .find-affordable-section p {
+    width: 70%;
+  }
+  .find-affordable-section form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 65%;
+  }
+  .find-affordable-section form .search-city-icons {
+    width: 31%;
+  }
+  .find-affordable-section form .search-city-icons input {
+    border: 1px solid var(--light-grey-txt);
+    padding-left: 2.5rem;
+    margin-bottom: 0;
+  }
+  .find-affordable-section form .search-city-icons input:hover {
+    border: 1px solid var(--dark-blue);
+  }
+  .find-affordable-section form .search-city-icons input:focus {
+    border: 1px solid var(--dark-blue);
+  }
+  .find-affordable-section form .search-city-icons .fa-map-marker-alt {
+    font-size: 1.3rem;
+    left: 6%;
+    top: 31%;
+  }
+  .find-affordable-section form .search-city-icons .fa-globe-europe {
+    top: 32%;
+    color: var(--light-grey-txt);
+    left: 86%;
+  }
+  .find-affordable-section form .search-doctor {
+    border: 1px solid var(--light-grey-txt);
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .find-affordable-section form .search-doctor:hover {
+    border: 1px solid var(--dark-blue);
+  }
+  .find-affordable-section form .search-doctor:focus {
+    border: 1px solid var(--dark-blue);
+  }
+  .find-affordable-section form button {
+    margin-top: 0;
+    width: 19%;
+    height: 3.7rem;
+  }
+  .find-affordable-section form button:hover {
+    opacity: 0.8;
+  }
+  .how-it-works-section div ul {
+    width: 43%;
+  }
+  .how-it-works-section div ul li button {
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .how-it-works-section div ul li button span {
+    padding-right: 3rem;
+    font-size: 2.3rem;
+  }
+  .how-it-works-section div ul li button:active {
+    border: 3px solid var(--light-blue);
+    color: var(--dark-blue);
+  }
+  .how-it-works-section div ul li button:active span {
+    color: var(--light-blue);
+  }
+  .how-it-works-section div .mobile-images {
+    display: none;
+  }
+  .how-it-works-section div .bttn-ki-images {
+    width: 48%;
+  }
+  .how-it-works-section div .bttn-ki-images figure {
+    width: 100%;
+  }
+  .how-it-works-section div .bttn-ki-images figure figcaption {
+    padding-top: 2rem;
+  }
+  .how-it-works-section div .bttn-ki-images figure figcaption p {
+    padding-top: 0.5rem;
+    text-align: center;
+  }
+  .world-class-expert-section {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+    padding-bottom: 3rem;
+  }
+  .world-class-expert-section .ipad-mobile-doctor {
+    display: none;
+  }
+  .world-class-expert-section .doctor-cards {
+    display: block;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide {
+    height: 29rem;
+    border-bottom: 0.3rem solid var(--light-blue);
+    background-color: var(--white);
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide img {
+    height: 24rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide h4 {
+    color: var(--light-blue-text);
+    position: relative;
+    text-align: left;
+    padding: 0.5rem 2rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide h4::before {
+    content: "";
+    width: 1.7rem;
+    left: -0.1%;
+    top: 56%;
+    position: absolute;
+    border-bottom: 3px solid var(--light-blue-text);
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide div {
+    padding-left: 2rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__arrows {
+    display: none;
+  }
+  .world-class-expert-section .doctor-cards .splide__pagination {
+    width: 10%;
+    position: absolute;
+    top: 93%;
+    left: 3%;
+  }
+  .world-class-expert-section .doctor-cards .splide__pagination li {
+    width: 25%;
+  }
+  .world-class-expert-section .doctor-cards .splide__pagination li .splide__pagination__page {
+    opacity: 1;
+    -webkit-transition: none;
+    transition: none;
+    padding: 0.4rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__pagination li .splide__pagination__page:hover {
+    opacity: 1;
+  }
+  .world-class-expert-section .doctor-cards .splide__pagination__page.is-active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: var(--dark-blue);
+    border: 3px solid var(--light-blue-text);
+  }
+  .world-class-expert-section .doctor-cards .splide__track {
+    position: relative;
+    height: 35rem;
+    padding-bottom: 14rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide {
+    height: 30rem;
+    margin-left: 0.4rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide img {
+    height: 21rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide h4 {
+    padding-top: 1.5rem;
+  }
+  .world-class-expert-section .doctor-cards .splide__track .splide__list .splide__slide h4::before {
+    content: "";
+    width: 1.5rem;
+    top: 60%;
+    border-bottom: 2px solid var(--light-blue-text);
+  }
+  .feature-medical-section {
+    padding-bottom: 3rem;
+  }
+  .feature-medical-section .ipad-mobile-patient {
+    display: none;
+  }
+  .feature-medical-section .patient-cards {
+    display: block;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide figure {
+    height: 20rem;
+    position: relative;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide figure h4 {
+    text-align: left;
+    color: var(--white);
+    position: absolute;
+    z-index: 5;
+    top: 84%;
+    left: 3%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide figure p {
+    color: var(--white);
+    left: 3%;
+    position: absolute;
+    z-index: 5;
+    top: 90%;
+    text-align: left;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide figure::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 25, 25, 0)), to(#0e0a0a));
+    background-image: linear-gradient(to bottom, rgba(34, 25, 25, 0), #0e0a0a);
+  }
+  .feature-medical-section .patient-cards .splide__arrows {
+    display: none;
+  }
+  .feature-medical-section .patient-cards .splide__pagination {
+    width: 10%;
+    position: absolute;
+    top: 93%;
+    left: 3%;
+  }
+  .feature-medical-section .patient-cards .splide__pagination li {
+    width: 25%;
+  }
+  .feature-medical-section .patient-cards .splide__pagination li .splide__pagination__page {
+    opacity: 1;
+    background-color: var(--light-grey-txt);
+    -webkit-transition: none;
+    transition: none;
+    padding: 0.4rem;
+  }
+  .feature-medical-section .patient-cards .splide__pagination li .splide__pagination__page:hover {
+    opacity: 1;
+  }
+  .feature-medical-section .patient-cards .splide__pagination__page.is-active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border: 3px solid var(--light-blue-text);
+  }
+  .feature-medical-section .patient-cards .splide__track {
+    height: 61rem;
+    padding-bottom: 8rem;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 17rem 6rem 4rem 27rem;
+        grid-template-rows: 17rem 6rem 4rem 27rem;
+    grid-gap: 0.5rem;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide figure {
+    height: 100%;
+    width: 100%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide figure p {
+    font-size: 1rem;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img1 h4 {
+    top: 76%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img1 p {
+    top: 84%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img2 h4 {
+    top: 84%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img2 p {
+    top: 89%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img3 h4 {
+    top: 82%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img3 p {
+    top: 89%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img4 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    grid-row: 2/5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img4 h4 {
+    top: 88%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img4 p {
+    top: 92%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img5 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img6 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3/5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img6 h4 {
+    top: 86%;
+  }
+  .feature-medical-section .patient-cards .splide__track .splide__list .splide__slide .patient-img6 p {
+    top: 91%;
+  }
+  .exclusive-services-section {
+    padding-bottom: 5.5em;
+  }
+  .exclusive-services-section .exclusive-cards figure {
+    height: 13rem;
+    width: 16.4%;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  .exclusive-services-section .exclusive-cards figure img {
+    margin-top: 1rem;
+    height: 50%;
+    width: 50%;
+    margin-left: 25%;
+  }
+  .exclusive-services-section .exclusive-cards figure h5 {
+    color: var(--light-grey-txt);
+  }
+  .need-help-section {
+    padding-top: 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 12rem;
+  }
+  .need-help-section p {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

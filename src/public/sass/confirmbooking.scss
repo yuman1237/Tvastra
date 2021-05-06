@@ -1,0 +1,113 @@
+section {
+  padding-top: 2rem;
+  background-color: var(--light-grey);
+  align-items: center;
+  .clinic {
+    background-color: var(--white);
+    width: 40%;
+
+    padding: 1rem;
+
+    h3 {
+      color: var(--light-blue-text);
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--light-grey-txt);
+      font-size: 1.8rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 1rem;
+      li {
+        width: 50%;
+        padding: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        i {
+          padding-top: 0.2rem;
+          color: var(--light-blue-text);
+          width: 8%;
+        }
+        p {
+          width: 88%;
+          padding: 0;
+          display: inline-block;
+          font-size: 1rem;
+          padding-left: 1rem;
+          color: var(--dark-blue);
+        }
+        a {
+          text-decoration: none;
+          font-family: nexafont-bold;
+          color: var(--light-blue-text);
+        }
+      }
+    }
+    figure {
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 30%;
+        height: 7rem;
+      }
+      figcaption {
+        width: 65%;
+        height: 5rem;
+
+        h5 {
+          text-align: left;
+          span {
+            color: var(--light-blue-text);
+          }
+        }
+      }
+    }
+  }
+  .confirmed {
+    width: 55%;
+
+    justify-content: flex-start;
+    h2 {
+      text-align: left;
+      font-size: 2rem;
+      i {
+        font-size: 1.8rem;
+        color: var(--green);
+      }
+    }
+    h4 {
+      text-align: left;
+      padding-bottom: 2rem;
+    }
+    big {
+      width: 100%;
+      font-size: 1.1rem;
+      font-family: nexafont-bold;
+      color: var(--light-blue-text);
+      padding-bottom: 0.8rem;
+    }
+    small {
+      width: 100%;
+      font-family: nexafont;
+      font-size: 1.1rem;
+      padding-bottom: 0.8rem;
+    }
+    .buttons {
+      width: 90%;
+      padding-top: 2rem;
+      .secondary-bttn-light {
+        padding: 1.1rem;
+        font-size: 1.2rem;
+        a {
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

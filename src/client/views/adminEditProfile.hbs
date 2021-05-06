@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/sass/reset.css">
+    <link rel="stylesheet" type="text/css" href="/sass/theme.css">
+    <link rel="stylesheet" type="text/css" href="/sass/adminEditProfile.css">
+    <link rel="shortcut icon" href="./uploads/Logo123.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css
+    ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css">
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+
+    <title>Admin Prfile</title>
+</head>
+
+<body>
+    <nav>
+
+        <a href="index"> <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+                alt="tvastra-logo"></a>
+
+        <ul class="nav-buttns">
+            <li>
+                <a href="tavastraplus"> <button class="secondary-bttn-dark tvsatraplus">
+                        Tvastra plus
+                    </button></a>
+
+            </li>
+            <li> <button class="secondary-bttn-dark">Get a Qoute</button>
+
+            </li>
+
+            <li class="dropdown">
+
+                <button class="primary-bttn username">Admin</button>
+
+
+                <div class="dropdown-content">
+                    <a href="#" class="name-profile">
+                        <div class="name-profile-div">
+                            <figure>
+                                <img src="./uploads/vector-users-icon.webp" alt="">
+                            </figure>
+                            <span> <big>Administrator</big>
+                                <small>9876545674</small>
+                            </span>
+
+                        </div>
+                    </a>
+                    <a href="#" class="drop-anchor">My Appointments</a>
+                    <a href="#" class="drop-anchor">My Medical Reports</a>
+                    <a href="#" class="drop-anchor">My Lab Tests</a>
+                    <a href="#" class="drop-anchor">My Payments</a>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="drop-anchor">Log Out</button>
+                    </form>
+
+                </div>
+
+
+
+            </li>
+
+
+
+        </ul>
+
+
+        <i class="fas fa-bars"></i>
+
+    </nav>
+    <main>
+        <section>
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <ul>
+                    <li>
+                        <a href="admin_dashboard"><i class="fas fa-user-alt"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li><a href="Admin_User"><i class="fa fa-th-list"></i> <span>Users</span>
+                        </a></li>
+                    <li><a href="Admin_Doctor"><i class="far fa-calendar-check"></i> <span>Doctors</span> </a></li>
+                    <li><a href="Admin_hospital"><i class="fa fa-file-alt"></i> <span>Hospitals</span> </a></li>
+                    <li><a href="admin_settings"><i class="fa fa-user-cog"></i> <span> Settings</span></a></li>
+
+                </ul>
+            </div>
+            <form action="/adminEditProfile?id={{user._id}}" method="POST" enctype="multipart/form-data">
+                <div class="account">
+                    <h2>Accounts</h2>
+                    <button type="submit" class="secondary-bttn-light">Save changes</button>
+                </div>
+                <div class="profile-name">
+                    <div>
+                        <label>Profile Photo</label>
+                        <div class="profile-pic-select">
+
+                            <figure>
+                                {{#if doc}}
+                                <img src="/./uploads/{{doc.myfile}}" alt="No pic" id="output">
+                                {{else}}
+                                <img src="/./uploads/{{user.myfile}}" alt="No pic" id="output">
+
+                                {{/if}}
+                            </figure>
+
+                            <div class="select-photo">
+                                <span>Please Select the Picture </span>
+                                <label for="myfile">Select picture</label>
+                                <input type="file" id="myfile" name="myfile" accept="image/*" onchange="loadFile(event)"
+                                    style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-label">
+                        <label for="">Name</label>
+                        <input type="text" value="{{user.name}}" name="name">
+                    </div>
+                </div>
+                <div class="inputs-div">
+                    <div class="input-label edit-pen">
+                        <label for="">Phone Number</label>
+                        <span class="fa fa-pen" onclick="openModelBox()"></span>
+                        <input type="number" value="{{user.pnumber}}" name="pnumber" readonly id="pnumber">
+                    </div>
+                    <div class="input-label">
+
+                        <label for="">Email</label>
+                        <input type="email" value="{{user.email}}" name="email">
+                    </div>
+
+                    <div class="input-label">
+
+                        <label for="">Gender</label>
+
+                        <select id="gender" name="gender" value="{{user.gender}}">
+                            <option selected>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="input-label">
+
+                        <label for="">Date of birth</label>
+                        <input type="date" name="date" id="DOB">
+                    </div>
+
+
+                    <div class="input-label">
+
+                        <label for="">TimeZone</label>
+                        <input type="text" value="{{user.timezone}}" name="timezone">
+                    </div>
+                </div>
+                <div class="inputs-div">
+                    <div class="input-label">
+                        <label for="">House no./Street name</label>
+                        <input type="text" value="{{user.homeno}}" name="homeno">
+                    </div>
+                    <div class="input-label">
+
+                        <label for="">Colony/Street/Locality</label>
+                        <input type="text" value="{{user.street}}" name="street">
+                    </div>
+
+                    <div class="input-label">
+
+                        <label for="">City</label>
+                        <input type="text" value="{{user.city}}" name="city">
+                    </div>
+                    <div class="input-label">
+
+                        <label for="">State</label>
+                        <input type="text" value="{{user.state}}" name="state">
+                    </div>
+                    <div class="input-label">
+
+                        <label for="">Country</label>
+                        <input type="text" value="{{user.country}}" name="country">
+                    </div>
+
+                </div>
+                {{#if doc}}
+                <div class="inputs-div-tag">
+                    <div class="input-label">
+                        <label for="">Hospitals</label>
+                        <input type="text" name="hospitals" class="tags-input" data-tag-input=""
+                            value="{{doc.hospitals}}">
+                    </div>
+                    <div class="input-label">
+
+                        <label for="">Achievements</label>
+                        <input type="text" name="achievement" class="tags-input" data-tag-input=""
+                            value="{{doc.achievement}}">
+
+                    </div>
+
+                    <div class="input-label">
+
+                        <label for="">Qualification</label>
+                        <input type="text" name="qualification" class="tags-input" data-tag-input=""
+                            value="{{doc.qualification}}">
+
+                    </div>
+                    <div class="input-label">
+                        <label for="">Experience (In Years)</label>
+                        <input type="number" name="experience" value="{{doc.experience}}">
+                    </div>
+                    <div class="input-label">
+                        <label for="">Awards</label>
+                        <input type="text" name="awards" data-tag-input="" class="tags-input" value="{{doc.awards}}">
+
+                    </div>
+                    <div class="input-label">
+                        <label for="">Specialization</label>
+                        <input type="text" name="spcialization" data-tag-input="" class="tags-input"
+                            value="{{doc.spcialization}}">
+
+                    </div>
+                    <div class="input-label">
+                        <label for="">Avg Fees (in Rupees)</label>
+                        <input type="number" name="avgfees" value="{{doc.avgfees}}">
+                    </div>
+
+                    <div class=" textrea">
+                        <label for="">Your Description</label>
+                        <textarea type="text" name="describe">{{doc.describe}}</textarea>
+
+                    </div>
+                </div>
+                {{/if}}
+            </form>
+        </section>
+    </main>
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+<script>
+    var tagInput = document.querySelectorAll("[data-tag-input]");
+    for (i = 0; i < tagInput.length; i++) {
+        new Tagify(tagInput[i], {
+            duplicates: false,
+            trim: true,
+            maxTags: 5,
+            originalInputValueFormat: valuesArr => valuesArr.map(item => item.value).join(', '),
+        });
+    }
+    var loadFile = function (event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+
+
+    let momdate = moment("{{ user.date }}").format("YYYY-MM-DD");
+    document.getElementById("DOB").value = momdate;
+</script>
+
+</html>

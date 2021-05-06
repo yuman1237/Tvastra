@@ -1,0 +1,132 @@
+@media (min-width: 1025px) {
+  main {
+    background-color: var(--light-grey);
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section .dashboard {
+    width: 28%;
+  }
+  main section .dashboard h3 {
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  main section .dashboard ul li {
+    width: 95%;
+    margin-bottom: 0.2rem;
+  }
+  main section .dashboard ul li a {
+    display: inline-block;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  main section .dashboard ul li a i {
+    color: var(--light-blue-text);
+    width: 2rem;
+  }
+  main section .dashboard ul li a span {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+  }
+  main section .dashboard ul li a:hover {
+    background-color: var(--light-grey-txt);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li a:hover span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .dashboard ul li .links {
+    background-color: var(--light-grey-txt);
+    border-left: 6px solid var(--light-blue-text);
+  }
+  main section .dashboard ul li .links span {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  main section .appointment {
+    width: 70%;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+  }
+  main section .appointment .appointment-sub h3 {
+    text-align: left;
+  }
+  main section .appointment .appointment-sub .container,
+  main section .appointment .appointment-sub .complete-container {
+    margin-bottom: 2rem;
+  }
+  main section .appointment .appointment-sub .container .appoint,
+  main section .appointment .appointment-sub .complete-container .appoint {
+    border: 1px solid var(--light-grey-txt);
+    background-color: var(--light-grey);
+    border-radius: 0.5rem;
+    height: 9rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  main section .appointment .appointment-sub .container .appoint big,
+  main section .appointment .appointment-sub .complete-container .appoint big {
+    width: 22%;
+    background-color: var(--white);
+    font-family: nexafont-bold;
+    padding: 2.8rem 2.5rem;
+    text-align: center;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
+  main section .appointment .appointment-sub .container .appoint div,
+  main section .appointment .appointment-sub .complete-container .appoint div {
+    width: 25%;
+    margin-left: 1rem;
+  }
+  main section .appointment .appointment-sub .container .appoint div p,
+  main section .appointment .appointment-sub .complete-container .appoint div p {
+    padding: 0.3rem;
+    font-family: nexafont-bold;
+    text-align: center;
+    color: var(--light-blue-text);
+  }
+  main section .appointment .appointment-sub .container .appoint div small,
+  main section .appointment .appointment-sub .complete-container .appoint div small {
+    width: 100%;
+    text-align: center;
+    font-family: nexafont-bold;
+    padding: 0.2rem;
+    color: #a1a1a1;
+  }
+  main section .appointment .appointment-sub .container .appoint div .status,
+  main section .appointment .appointment-sub .complete-container .appoint div .status {
+    background-color: #8d1313;
+    border-radius: 1.2rem;
+    padding: 0;
+    width: 70%;
+    color: var(--white);
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-left: 1.5rem;
+  }
+}
+/*# sourceMappingURL=appointments.css.map */

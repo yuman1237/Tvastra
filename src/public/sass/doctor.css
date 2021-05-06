@@ -1,0 +1,681 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(177, 174, 174);
+  --black: black;
+}
+
+.visible {
+  display: block !important;
+}
+
+.active1 {
+  background-color: var(--light-blue-text) !important;
+}
+
+.active1 .pageIndexLink {
+  color: white !important;
+}
+
+.page-active {
+  background-color: #3b7abd !important;
+}
+
+.page-active a {
+  color: white !important;
+}
+
+.pagenationContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagenationContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
+.pagenationContainer ul li {
+  border: 0.1rem solid #3b7abd;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0 0.2rem;
+  width: 15%;
+}
+
+.pagenationContainer ul li a {
+  color: #3b7abd;
+  font-size: nexafont-bold;
+}
+
+.pagenationContainer ul li:hover {
+  background-color: #3b7abd;
+}
+
+.pagenationContainer ul li:hover a {
+  color: white;
+}
+
+.pagenationContainer ul li:active {
+  background-color: #3b7abd;
+}
+
+.pagenationContainer ul li:active a {
+  color: white;
+}
+
+/*----------------------Mobile-View---------------------*/
+.doctor-heading {
+  display: none;
+}
+
+.sort-by-section {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sort-by-section p {
+  text-align: left;
+  width: 60%;
+}
+
+.timeslot_active_hai {
+  border-bottom: 3px solid var(--light-blue-text) !important;
+}
+
+.doctors-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.doctors-section .filter-by {
+  display: none;
+}
+
+.doctors-section .doctor-cards .doctor-card {
+  border: 1px solid var(--light-grey-txt);
+  margin-bottom: 1rem;
+}
+
+.doctors-section .doctor-cards .doctor-card h3 {
+  color: var(--light-blue-text);
+  text-align: left;
+  position: relative;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.doctors-section .doctor-cards .doctor-card h3::before {
+  content: "";
+  left: 0%;
+  top: 52%;
+  width: 1.5rem;
+  position: absolute;
+  border-bottom: 3px solid var(--light-blue-text);
+}
+
+.doctors-section .doctor-cards .doctor-card ul li {
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.doctors-section .doctor-cards .doctor-card ul li span i {
+  color: var(--light-blue-text);
+  padding: 0 0.5rem 0 0.8rem;
+}
+
+.doctors-section .doctor-cards .doctor-card a {
+  width: 100%;
+}
+
+.doctors-section .doctor-cards .doctor-card a button {
+  margin: 2% 12%;
+}
+
+.doctors-section .doctor-cards .doctor-card figure {
+  height: 62%;
+}
+
+.need-help-section {
+  background-color: var(--light-blue);
+}
+
+.need-help-section h2 {
+  color: var(--white);
+}
+
+.need-help-section p {
+  padding-left: 0.2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .doctor-heading {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0;
+    height: 15rem;
+    position: relative;
+  }
+  .doctor-heading figure {
+    height: 100%;
+  }
+  .doctor-heading figure img {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .doctor-heading figure::after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+    opacity: 0.8;
+  }
+  .doctor-heading figure h2 {
+    position: absolute;
+    top: 45%;
+    left: -24%;
+    z-index: 3;
+  }
+  .doctor-heading figure h2 span {
+    text-decoration: underline;
+    color: var(--dark-blue);
+    font-family: nexafont;
+  }
+  .doctors-section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 0rem;
+    padding-bottom: 4rem;
+  }
+  .doctors-section .filter-by {
+    display: inline;
+    width: 28%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-right: 1rem;
+  }
+  .doctors-section .filter-by h4 {
+    text-align: left;
+    background-color: var(--light-grey);
+    padding: 1rem;
+  }
+  .doctors-section .filter-by .filter-sub-section {
+    padding-top: 1rem;
+    border-bottom: 3px solid var(--light-grey);
+  }
+  .doctors-section .filter-by .filter-sub-section h4 {
+    background-color: var(--white);
+    font-family: nexafont;
+    text-align: left;
+  }
+  .doctors-section .filter-by .filter-sub-section h4 span i {
+    margin-left: 2.8rem;
+    position: relative;
+    color: var(--light-blue-);
+  }
+  .doctors-section .filter-by .filter-sub-section h4 span i::after {
+    content: "";
+    position: absolute;
+    width: 1.1rem;
+    left: 130%;
+    top: 30%;
+    border-bottom: 4px solid var(--light-grey);
+  }
+  .doctors-section .filter-by .filter-sub-section ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 1rem;
+  }
+  .doctors-section .filter-by .filter-sub-section ul li input {
+    width: 20%;
+  }
+  .doctors-section .filter-by .filter-sub-section button {
+    background-color: var(--white);
+    color: var(--light-blue-text);
+    font-size: 1rem;
+    margin: 1rem 0.8rem;
+  }
+  .doctors-section .doctor-cards {
+    width: 72%;
+  }
+  .doctors-section .doctor-cards .doctor-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 17rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doctor-info-bttn {
+    width: 65%;
+    height: 100%;
+  }
+  .doctors-section .doctor-cards .doctor-card .doctor-info-bttn ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 50%;
+  }
+  .doctors-section .doctor-cards .doctor-card .doctor-info-bttn ul li {
+    width: 50%;
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doctor-info-bttn button {
+    margin: 2% 8%;
+    padding: 0.7rem 2rem;
+  }
+  .doctors-section .doctor-cards .doctor-card figure {
+    width: 35%;
+    height: 100%;
+  }
+  .need-help-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/*------------------Web-View---------------*/
+@media (min-width: 1025px) {
+  .doctor-heading {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0;
+    height: 22rem;
+    position: relative;
+  }
+  .doctor-heading figure {
+    height: 100%;
+  }
+  .doctor-heading figure img {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .doctor-heading figure::after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+    opacity: 0.8;
+  }
+  .doctor-heading figure h2 {
+    position: absolute;
+    top: 45%;
+    left: 9.5%;
+    z-index: 3;
+    font-family: nexafont;
+  }
+  .doctor-heading figure h2 span {
+    text-decoration: underline;
+    color: var(--dark-blue);
+    font-family: nexafont-bold;
+  }
+  .sort-by-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1.5rem 9rem 0rem 9rem;
+  }
+  .sort-by-section p {
+    padding: 0;
+    text-align: left;
+    font-size: 1.4rem;
+    width: 60%;
+  }
+  .doctors-section {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .doctors-section .filter-by {
+    display: inline;
+    width: 26%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-right: 2rem;
+  }
+  .doctors-section .filter-by h4 {
+    text-align: left;
+    font-size: 1.1rem;
+    background-color: var(--light-grey);
+    padding: 1rem 1.4rem;
+  }
+  .doctors-section .filter-by .filter-sub-section {
+    padding-top: 1rem;
+    border-bottom: 2px solid var(--light-grey);
+  }
+  .doctors-section .filter-by .filter-sub-section h4 {
+    background-color: var(--white);
+    font-family: nexafont;
+    font-size: 1.3rem;
+    text-align: left;
+    padding-left: 1.4rem;
+  }
+  .doctors-section .filter-by .filter-sub-section h4 span i {
+    margin-left: 7rem;
+    font-size: 0.9rem;
+    position: relative;
+    color: var(--light-blue-text);
+  }
+  .doctors-section .filter-by .filter-sub-section h4 span i::after {
+    content: "";
+    position: absolute;
+    width: 0.8rem;
+    left: 350%;
+    top: 30%;
+    border-bottom: 4px solid var(--light-grey-txt);
+  }
+  .doctors-section .filter-by .filter-sub-section ul li {
+    padding-bottom: 0.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .doctors-section .filter-by .filter-sub-section ul li input {
+    width: 15%;
+  }
+  .doctors-section .filter-by .filter-sub-section button {
+    background-color: var(--white);
+    color: var(--light-blue-text);
+    font-size: 1rem;
+    margin: 1rem 0.8rem 1rem 0.8rem;
+  }
+  .doctors-section .doctor-cards {
+    width: 72%;
+  }
+  .doctors-section .doctor-cards .doctor-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc {
+    height: 20rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn {
+    width: 70%;
+    height: 100%;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn h3 {
+    padding: 1rem 0 1rem 3rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn h3::before {
+    width: 2.6rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn ul {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 100%;
+    height: 35%;
+    padding-left: 2rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn ul li {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn ul li i {
+    font-size: 1.2rem;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc .doctor-info-bttn button {
+    margin: 0 12% 2% 7%;
+  }
+  .doctors-section .doctor-cards .doctor-card .doc figure {
+    width: 30%;
+    height: 100%;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .no_slot {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: var(--light-grey);
+    padding: 0.5rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .no_slot small {
+    font-size: 1.5rem;
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .flickity-page-dots {
+    display: none;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .flickity-viewport {
+    width: 86%;
+    left: 7%;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .flickity-button {
+    background-color: var(--light-grey);
+    padding: 0.2rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .flickity-prev-next-button .flickity-button-icon {
+    position: absolute;
+    left: 33%;
+    top: 31%;
+    width: 40%;
+    height: 40%;
+    color: var(--light-blue-text);
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .flickity-button:disabled {
+    opacity: 1;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .carousel-cell {
+    width: 36%;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .carousel-cell .time_slot_day {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-bottom: 3px solid transparent;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .carousel-cell .time_slot_day:hover {
+    border-bottom: 3px solid var(--light-blue-text);
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .carousel-cell .time_slot_day big {
+    font-size: 1.2rem;
+    font-family: nexafont-bold;
+    padding-bottom: 1rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #main-carousel .carousel-cell .time_slot_day small {
+    color: var(--light-blue-text);
+    font-family: nexafont-bold;
+    font-size: 1.1rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .timinig-not-avaliable div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 4rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .timinig-not-avaliable div p {
+    padding: 1rem;
+    width: 30%;
+    font-family: nexafont-bold;
+    color: var(--light-grey-txt);
+    text-align: center;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .timinig-not-avaliable div .secondary-bttn-light {
+    padding: 0.5rem 2rem;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .mor {
+    width: 22%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .mor p {
+    width: 50%;
+    padding: 0;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .tim {
+    width: 78%;
+    padding: 1rem 1rem 2rem 1rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .morning {
+    border-bottom: 1px solid var(--light-grey-txt);
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .evening {
+    border-bottom: 1px solid var(--light-grey-txt);
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .afternoon {
+    border-bottom: 1px solid var(--light-grey-txt);
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .timinig {
+    border: 1px solid var(--green);
+    width: 22%;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+  }
+  .doctors-section .doctor-cards .doctor-card #time_show .timinig p {
+    padding: 0;
+    color: var(--green);
+    font-size: 1rem;
+  }
+  .need-help-section {
+    padding-top: 4rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 12rem;
+  }
+  .need-help-section p {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=doctor.css.map */

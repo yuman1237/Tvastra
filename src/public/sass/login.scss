@@ -1,0 +1,315 @@
+:root {
+  --dark-blue: rgb(18, 18, 59);
+  --light-blue: #8cc5eb;
+  --white: #ffffff;
+  --light-blue-text: #297cb3;
+  --light-grey: rgb(226, 218, 218);
+  --light-grey-txt: rgb(139, 139, 139);
+  --black: black;
+}
+
+/*----------Mobile-View-------------*/
+body {
+  background-color: var(--light-blue);
+}
+nav {
+  background-color: var(--white);
+}
+section {
+  form {
+    margin: 12.2% 0;
+    background-color: var(--white);
+    border: 1px solid black;
+    box-shadow: var(--black) 3px 5px 24px;
+    h2 {
+      color: var(--light-blue-text);
+      border-bottom: 1px solid var(--light-grey-txt);
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .login-input {
+      position: relative;
+      input {
+        width: 100%;
+      }
+      width: 90%;
+      i {
+        position: absolute;
+        top: 22%;
+        left: 87%;
+        font-size: 1.6rem;
+        color: var(--light-grey-txt);
+      }
+    }
+    input {
+      border: 2px solid var(--light-grey-txt);
+      width: 90%;
+      padding: 1.1rem;
+    }
+    .secondary-bttn-dark {
+      margin-bottom: 1rem;
+      width: 90%;
+      letter-spacing: 0.3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      position: relative;
+      i {
+        position: absolute;
+        color: var(--white);
+        left: 92%;
+        top: 35%;
+      }
+    }
+    p {
+      padding: 2rem 0 1rem 0rem;
+      font-size: 0.8rem;
+      font-family: nexafont-bold;
+      a {
+        color: var(--light-blue-text);
+        font-family: nexafont-bold;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  h5 {
+    margin: 11.8% 0 0 0;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  section {
+    padding-right: 18%;
+    padding-left: 18%;
+    form {
+      margin: 36.5% 0;
+      h2 {
+        margin-bottom: 2rem;
+      }
+      .login-input {
+        input {
+          font-size: 1rem;
+        }
+
+        i {
+          left: 90%;
+        }
+      }
+      input {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+      .secondary-bttn-dark {
+        margin-bottom: 2rem;
+
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      p {
+        padding: 2rem 0 1rem 0rem;
+        font-size: 1rem;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+    h5 {
+      margin: 13.9% 0 0 0;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  nav {
+    .nav-links {
+      width: 30%;
+      margin: 0;
+      form {
+        padding: 0;
+
+        .nav-bar-anchor-bttn {
+          width: 100%;
+          font-size: 1.1rem;
+          padding: 0;
+          cursor: pointer;
+          background-color: var(--white);
+        }
+      }
+      .nav-bar-bttn-a1 {
+        width: 12%;
+      }
+      .nav-bar-bttn-a2 {
+        width: 14%;
+      }
+      .nav-bar-bttn-a3 {
+        width: 18%;
+      }
+      .nav-bar-bttn-a4 {
+        width: 27%;
+      }
+      .nav-bar-bttn-a5 {
+        width: 11%;
+      }
+    }
+    .nav-buttns {
+      width: 13%;
+    }
+  }
+  section {
+    height: 41rem;
+    padding-top: 2.5rem;
+    padding-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .alert-message {
+      height: 4.5rem;
+      background-color: var(--white);
+      position: absolute;
+      top: 3%;
+      left: 75%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 21rem;
+      border-left: 5px solid red;
+      .msg-paras {
+        width: 60%;
+
+        .message-para {
+          color: red;
+          font-family: nexafont-bold;
+          font-size: 0.8rem;
+
+          padding-bottom: 0;
+        }
+        .main-message {
+          font-size: 1.2rem;
+        }
+      }
+
+      i {
+        width: 15%;
+        font-size: 2.5rem;
+        color: red;
+      }
+      #closebttn {
+        padding-left: 1rem;
+        width: 10%;
+        font-size: 3.5rem;
+        font-family: nexafont-bold;
+        color: var(--light-grey-txt);
+      }
+    }
+    .green-color {
+      border-left: 5px solid green;
+      .msg-paras {
+        .message-para {
+          color: green;
+        }
+      }
+
+      i {
+        color: green;
+      }
+    }
+    form {
+      width: 40%;
+      margin: 0;
+      border: none;
+
+      h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+        padding: 2rem;
+      }
+      .login-input {
+        input {
+          font-size: 1rem;
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+          font-family: nexafont-bold;
+          color: var(--dark-blue);
+          &:focus {
+            border: 2px solid var(--light-blue-text);
+          }
+        }
+
+        i {
+          left: 90%;
+        }
+      }
+      .password-input {
+        width: 90%;
+        position: relative;
+        input {
+          width: 100%;
+          color: var(--light-grey-txt);
+
+          margin-bottom: 0.7rem;
+          font-family: nexafont-bold;
+
+          font-size: 1rem;
+          padding: 1rem;
+          &:focus {
+            border: 2px solid var(--light-blue-text);
+          }
+        }
+        i {
+          position: absolute;
+          color: var(--light-blue-text);
+          left: 90%;
+          top: 25%;
+          font-size: 1.5rem;
+        }
+      }
+      .otp-div {
+        width: 89%;
+        padding: 0.7rem 0 2rem 0;
+        a {
+          color: var(--light-blue-text);
+          font-family: nexafont-bold;
+          font-size: 1rem;
+        }
+        #forgotpassword {
+          font-size: 1rem;
+          color: var(--light-blue-text);
+          background-color: var(--white);
+          font-family: nexafont-bold;
+        }
+      }
+      .secondary-bttn-dark {
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--dark-blue);
+
+        padding: 1.2rem;
+        &:hover {
+          background-color: white;
+          color: var(--dark-blue);
+          i {
+            color: var(--dark-blue);
+          }
+        }
+      }
+      p {
+        padding: 1rem 0 1.5rem 10.5rem;
+        font-size: 1rem;
+        font-family: nexafont-bold;
+        color: var(--light-grey-txt);
+        a {
+          color: var(--light-blue-text);
+          font-family: nexafont-bold;
+          font-size: 1rem;
+        }
+      }
+    }
+    h5 {
+      font-size: 1rem;
+      margin: 7% 0 0 0;
+    }
+  }
+}
